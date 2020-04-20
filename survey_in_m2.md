@@ -1,6 +1,6 @@
 # Survey in M2
 
-Created by Yuto Mori / 森 雄人
+Created by Yuto Mori / 森 雄人 (D_dof)
 
 
 
@@ -37,7 +37,7 @@ This version is 0.0
 
 ## Main Conferences & Jounals
 
-*ICML*, *NeurIPS*, *ICLR*, *AAAI*, AISTATS*, *JMLR*, *S&P*, *Security* 
+*ICML*, *NeurIPS*, *ICLR*, *AAAI*, *AISTATS*, *JMLR*, *S&P*, *Security* 
 
 
 
@@ -55,6 +55,8 @@ This version is 0.0
 - WPES = **W**orkshop on **P**rivacy in the **E**lectronic **S**ociety
 - Euro S&P = 
 - CIKM = 
+- ACSAC = 
+- FoCM = **Fo**undations of **C**omputational **M**athematics
 
 
 
@@ -67,9 +69,26 @@ This version is 0.0
 
 
 
+- This survey may contain wrong summary since I often read papers in a hurry. Please pay attention to this.
+- Mainly, Translation by [DeepL](https://www.deepl.com/en/home) . Thanks for exellent service !!!
+- But I often don't check the precise expression, so it may be diffrent from Japanese expression or contain wrong expression by translation.
+- Each Figure is cited from each paper.
+
 
 
 # Survey Diary
+
+
+
+## 【2020/04/20】**Optimal Rates for the Regularized Least-Squares Algorithm**【FoCM2006】
+
+[**[Caponnetto and Vito, *FoCM*, 2006]**](#caponnetto2006)
+
+
+
+ヒルベルト空間上の正則化つき二乗誤差回帰問題の経験誤差最小解と $\inf_{f \in \mathcal{H}} f$ との差の上界と下界の min-max レートなどを導出. このとき, 元の分布 $\rho$  とカーネル $K$ から定まる作用素の固有値の減衰レートを用いてバウンドしているのが特徴的. 一般的な Rademacher Complexity によるバウンドでは高々 $O(1/\sqrt{n})$ だったが, 精密に固有値まで見ると $O(1/n)$ にできる.
+
+The empirical error minimum solution of the regularized squared error regression problem on Hilbert space and the min-max rate of the upper and lower bounds of the difference between $\inf_{f \in \mathcal{H}} f$ and the empirical error minimum solution are derived. The important point is that they uses around using the decay rate of the eigenvalues of the operators determined from the original distribution $\rho$  and the kernel $K$. The bounds using the general Rademacher Complexity are as high as $O(1/\sqrt{n})$, but thinking of the eigenvalues, its rate are as high as $O(1/n)$.
 
 
 
@@ -81,7 +100,7 @@ This version is 0.0
 
 学習として pool-based な状況を考える. また, このときに学習者と教師がいる設定とする. 学習者は次に点 $x_1, \dots, x_K$ のうちどの $k$ を入力するべきか, という問題を多腕バンディット問題として考える. 学習者の報酬は $E[\sum_{t-1}^{T} y_t]$ ($y_t \in \{0, 1\}$ )で, できるだけ $y_t$ が1になるようなものを探索することになる. 一方教師側は $x_t$ が入ってきたときに $y_t$ をどのように返せば学習者が真のパラメータ $\theta^*$ に速く収束させられるかを考え, これを Markov Decision Process (MDP) として定式化する. このときの即時報酬は $R_t (x_1, y_1, \dots, x_{t-1}, y_{t-1}, x_t ; \theta^*) = x_t^{\top}\theta^*$ で, 教師側は $E^\pi[\sum_{t=1}^T \gamma^{t-1} R_t]$ という価値関数の最大化をするエージェントとなる.  すると, 教師側の情報を使った方が通常の uncertainty sampling などの能動学習手法よりも速く解に収束させられることが実験的に確かめられた.
 
-They consider a pool-based situation for learning in which there are learners and teachers. they also assume that there are learners and teachers. The learner then asks which of the points $x_1, \dots, x_K$ should be inputted as a multi-arm bandit problem. The learner's reward is $E[\sum_{t-1}^{T} y_t]$ ($y_t \in \{0, 1\}$ ), and the teacher should search for things that make $y_t$ 1 as much as possible. The teacher, on the other hand, tries to figure out how to return $y_t$ when $x_t$ comes in so that the learners can converge to the true parameter $\theta^*$ as fast as possible, and formulates this as the Markov Decision Process (MDP). The immediate reward in this case is R_t (x_1, y_1, {t-1}, y_{t-1}, y_{t-1}, x_t ; \*theta^*) = x_t^{\*top}\*theta^*, and the teacher is the agent that maximizes the value function E^\pi[\*sum_{t=1}^T\*gamma^{t-1} R_t]. It is experimentally confirmed that the teacher's information can converge to the solution faster than other active learning methods such as uncertainty sampling.
+They consider a pool-based situation for learning in which there are learners and teachers. The learner then asks which of the points $x_1, \dots, x_K$ should be inputted as a multi-arm bandit problem. The learner's reward is $E[\sum_{t-1}^{T} y_t]$ ($y_t \in \{0, 1\}$ ), and the teacher should search for things that make $y_t$ 1 as much as possible. The teacher, on the other hand, tries to figure out how to return $y_t$ when $x_t$ comes in so that the learners can converge to the true parameter $\theta^*$ as fast as possible, and formulates this as the Markov Decision Process (MDP). The immediate reward in this case is $R_t (x_1, y_1,\dots, y_{t-1}, y_{t-1}, y_{t-1}, x_t ; \theta^*) = x_t^{\top} \theta^*$, and the teacher is the agent that maximizes the value function $E^\pi[\sum_{t=1}^T\gamma^{t-1} R_t]$. It is experimentally confirmed that the teacher's information can converge to the solution faster than other active learning methods such as uncertainty sampling.
 
 ![2020_04_20_peltola](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_20_peltola.png)
 
@@ -97,8 +116,6 @@ They consider a pool-based situation for learning in which there are learners an
 
 カーネルモデルの学習として Random Feature + SGD を使った時に, その推定量とベイズ判別器の差の汎化誤差が指数収束することを証明. 仮定として特筆すべきなのは "strong low-noise condition" と呼ばれる, 判別がしやすい状況になっていること. さらに, 指数収束するときの上界のレートは random feature の数 $M$ に依存しない. 
 
-
-
 They prove that the estimator converges exponentially to the Bayesian discriminator when Random Feature + SGD is used to train the model of the kernel function. It is noteworthy that the condition called the "strong low-noise condition" is easy to discriminate. Moreover, the upper bound rate of exponential convergence does not depend on the random feature several M. 
 
 
@@ -113,7 +130,7 @@ $$ \exist \delta \in (0, \frac{1}{2}), \  | \rho(Y=1 | x) - \frac{1}{2}| > \delt
 
 ## 【2020/04/17】**Agnostic Active Learning Without Constraints** 【NeurIPS2010】
 
-**[Beygelzimer et al., *NeurIPS*, 2010]**
+[**[Beygelzimer et al., *NeurIPS*, 2010]**](#beygelzimer2010)
 
 **keywords : Active Learning, Importance weighted, rejection threshold**
 
@@ -121,45 +138,31 @@ $$ \exist \delta \in (0, \frac{1}{2}), \  | \rho(Y=1 | x) - \frac{1}{2}| > \delt
 
 能動学習の方法の提案. Importance weighted active learning を用いたときの, 0-1判別損失で, しかもそれまでのクエリに依存する場合の汎化誤差と訓練誤差の差のバウンドを導出している. 真の関数が最適なベイズ判別関数にずっと近ければ, 高々 $O(\sqrt{n \log n})$ 点ぐらい調べれば良いということが言えて, これは普通の教師あり学習のレートより良くなる. しかし, 実験的には「うーん？？」というぐらいの精度しか出ていない印象. これはActive LearningよりSemi-supervised の方がいいと言われる所以にも繋がっているかも知れない.
 
-
-
-Proposal of a method of active learning. they derive the bounds of the difference between the generalization and training errors in the case of 0-1 discriminant loss with Importance weighted active learning and dependence on previous queries. If the true function is much closer to the optimal Bayesian discriminant function, they can say that they need to check it at most O(√(C n log n)) points, which is better than the rate of ordinary supervised learning. Experimentally, however, results is slightly good rather than supervised learning. this may be the reason why it is said that Semi-supervised is better than Active Learning.
+Proposal of a method of active learning. they derive the bounds of the difference between the generalization and training errors in the case of 0-1 discriminant loss with Importance weighted active learning and dependence on previous queries. If the true function is much closer to the optimal Bayesian discriminant function, they can say that they need to check it at most $O(\sqrt{( n \log n))}$ points, which is better than the rate of ordinary supervised learning. Experimentally, however, results is slightly good rather than supervised learning. this may be the reason why it is said that Semi-supervised is better than Active Learning.
 
 
 
 
 
-## 【2020/04/16】
+## 【2020/04/16】**Membership Inference Attacks Against Machine Learning Models**【S&P2017】
 
-**Membership Inference Attacks Against Machine Learning Models**
-
-**[Shokri et al., *IEEE SP*, 2017]**
-
-
+[**[Shokri et al., *S&P*, 2017]**](#shokri2017)
 
 **keywords : Membership Inference, black-box setting, hill-climbing** 
 
 
 
-モデルfが与えられ, この時あるデータxが訓練データに入っているか否かを当てる問題をMembership Inferenceという. この研究ではモデルがblack-boxなAPIでしかアクセスできない状況を考え, その時にMembership Inferenceを行う手法を提案. 具体的にはまず山登り法で “訓練集合っぽいデータセット” (この時に真のモデルにクエリを投げる必要がある) を作成し, その後適当な2層ニューラルネットで判別関数を学習させる. この判別モデルがMemberかどうかを判断するモデルとなる.
+モデル $f$ が与えられ, この時あるデータ $x$ が訓練データに入っているか否かを当てる問題をMembership Inferenceという. この研究ではモデルがblack-boxなAPIでしかアクセスできない状況を考え, その時にMembership Inferenceを行う手法を提案. 具体的にはまず山登り法で “訓練集合っぽいデータセット” (この時に真のモデルにクエリを投げる必要がある) を作成し, その後適当な2層ニューラルネットで判別関数を学習させる. この判別モデルがMemberかどうかを判断するモデルとなる.
 
-
-
-Given a model f, the problem of guessing whether a certain data x is included in the training data or not is called membership inference. In this study, they propose a method to perform membership inference when the model is accessible only by a black-box API. They first create a “training set-like dataset” (at which time they need to query the true model) using the hill-climbing method, and then train the discriminate function in an appropriate two-layer neural net. This discriminate model is used as a model to determine whether the model is a member or not.
-
-
+Given a model $f$ , the problem of guessing whether a certain data $x$ is included in the training data or not is called membership inference. In this study, they propose a method to perform membership inference when the model is accessible only by a black-box API. They first create a “training set-like dataset” (at which time they need to query the true model) using the hill-climbing method, and then train the discriminate function in an appropriate two-layer neural net. This discriminate model is used as a model to determine whether the model is a member or not.
 
 
 
 
 
-## 【2020/04/15】
+## 【2020/04/15】**Defending Against Machine Learning Model Stealing Attacks Using Deceptive Perturbations**【2018】
 
-**Defending Against Machine Learning Model Stealing Attacks Using Deceptive Perturbations** 
-
-**[Lee et al., 2018]**
-
-
+[**[Lee et al., 2018]**](#lee2018)
 
 **keywords : Model Extraction, Defense, Reverse Sigmoid, ResNet**
 
@@ -167,39 +170,23 @@ Given a model f, the problem of guessing whether a certain data x is included in
 
 Model Extraction に対する防御方法を提案した論文. 発想としてはそのまま予測した確率ベクトルyを返すのではなくy + rという形で少し変形した値を返す, という[Alabdulmohsin et al., *CIKM*, 2014] と似た方法を取っている. (彼らはその論文を引用していないが) 結果は数値実験的に示しており, ノイズの加え方として “Reverse Sigmoid” を用いたものが最もDefenseとして良かったと述べている.
 
-
-
-A paper that proposes a method to defend against Model Extraction. The idea is similar to that of [Alabdulmohsin et al., CIKM, 2014], in that instead of returning the predicted probability vector y as it is, return a slightly deformed value in the form of y + r. (They do not cite the paper. The results are shown numerically (although they do not cite the paper), and they say that the "Reverse Sigmoid" method of adding noise is the best as a defense.
-
+A paper that proposes a method to defend against Model Extraction. The idea is similar to that of [Alabdulmohsin et al., *CIKM*, 2014], in that instead of returning the predicted probability vector y as it is, return a slightly deformed value in the form of y + r. (They do not cite the paper. The results are shown numerically (although they do not cite the paper), and they say that the "Reverse Sigmoid" method of adding noise is the best as a defense.
 
 
 
+![2020_04_15_lee](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_15_lee.png)
 
 
 
+## 【2020/04/14】**Model Extraction Warning in MLaaS Paradigm**【ACSAC2018】
 
-
-
-
-![スクリーンショット 2020-04-15 23.57.30.png](blob:file:///b5cb9b3e-f93a-498b-aafc-ce3a3b288e9a)
-
-## 【2020/04/14】
-
-**Model Extraction Warning in MLaaS Paradigm** 
-
-**[Kesarwani et al., \*ACSAC\*, 2018]**
-
-
-
-
+[**[Kesarwani et al., *ACSAC*, 2018]**](#kesarwani2018)
 
 **keywords : Model Extraction, Decision Tree, Information Gain, monitor**
 
 
 
 Model Extraction を複数のユーザがクエリを投げる, というセッティングで行う. このとき,決定木を構成し, Information Gainなどを計算することで user ごとのステータスを把握するアルゴリズムを提案. このとき, 決定木がうまく学習できているのに, Model Extraction はうまくできていないということになれば, それに対してWarningを出す, ということができる. 実用的な観点からの論文.
-
-
 
 They run Model Extraction in the setting of multiple users throwing queries. In this case, they propose an algorithm to understand the status of each user by constructing a decision tree and calculating the information gain and so on. If the decision tree is well trained, but the Model Extraction is not well trained, they can issue a warning to the decision tree. This paper is written from a practical point of view.
 
@@ -215,9 +202,9 @@ They run Model Extraction in the setting of multiple users throwing queries. In 
 
 
 
-Bayesian Quadrature は周辺尤度のような積分で表される量を適切な有限点で近似する手法だったが, それをAdaptiveにやる, つまり, $x_1 … x_n$ までをみた上で $x_{n+1}$ を決めるAdaptive Bayesian Quadrature に対する理論保証は未だかつて与えられていなかった. 本研究ではABQがヒルベルト空間上の弱-貪欲なアルゴリズムと等価であることを示し, そこから真の量との誤差に関するレートを導出. カーネルが無限階微分可能なとき, そのレートは $O(\exp\{- D n^{1/d}\})$ と極めて速い収束になることを述べている. 難しいがめちゃくちゃ面白い. Adaptiveな方が良い, ということまではまだ言えていないようだ. 
+Bayesian Quadrature は周辺尤度のような積分で表される量を適切な有限点で近似する手法だったが, それをAdaptiveにやる, つまり, $x_1 … x_n$ までをみた上で $x_{n+1}$ を決める Adaptive Bayesian Quadrature に対する理論保証は未だかつて与えられていなかった. 本研究ではABQがヒルベルト空間上の弱-貪欲なアルゴリズムと等価であることを示し, そこから真の量との誤差に関するレートを導出. カーネルが無限階微分可能なとき, そのレートは $O(\exp\{- D n^{1/d}\})$ と極めて速い収束になることを述べている. 難しいがめちゃくちゃ面白い. Adaptiveな方が良い, ということまではまだ言えていないようだ. 
 
-The Bayesian Quadrature is a method to approximate the quantity represented by an integral, such as the marginal likelihood, at an appropriate finite point, but theoretical guarantees for the adaptive Bayesian Quadrature, which determines x_{n+1} by looking up to x_1 ... x_n, have not been given yet. In this work, they show that ABQ is equivalent to a weak-greedy algorithm on Hilbert space, from which they derive an error rate for the true quantity. they state that when the kernel is infinitely differentiable, the rate is O(exp{- D n^{1/d}}) and converges very fast. It is difficult, but it is very interesting. It seems that they have not yet said that Adaptive is better. 
+The Bayesian Quadrature is a method to approximate the quantity represented by an integral, such as the marginal likelihood, at an appropriate finite point, but theoretical guarantees for the adaptive Bayesian Quadrature, which determines $x_{n+1}$ by looking up to $x_1 \dots x_n$, have not been given yet. In this work, they show that ABQ is equivalent to a weak-greedy algorithm on Hilbert space, from which they derive an error rate for the true quantity. they state that when the kernel is infinitely differentiable, the rate is $O(\exp \{- D n^{1/d} \})$ and converges very fast. It is difficult, but it is very interesting. It seems that they have not yet said that Adaptive is better. 
 
 
 
@@ -526,7 +513,7 @@ This paper introduce the algorithm to extract 2-layer ReLU Neural Network from e
 
 
 
-## 【2020/03/25】**SoK: Towards the Science of Security and Privacy in Machine Learning**【2016】
+## 【2020/03/25】**Towards the Science of Security and Privacy in Machine Learning**【2016】
 
 [**[Papernot et al., 2016]**](#papernot2016)
 
@@ -624,7 +611,7 @@ Section 6 Model Extraction given class labels only
 
 <a name="chandrasekaran2020"> </a>[3] Varun Chandrasekaran, Kamalika Chaudhuri, Irene Giacomelli, Somesh Jha, and Songbai Yan. Exploring connections between active learning and model extraction. In *29th {USENIX} Security Symposium ({USENIX} Security 20)*, page : prepublication, 2020.
 
-<a name="papernot2016"> </a>[4] Nicolas Papernot, Patrick McDaniel, Arunesh Sinha, and Michael Wellman. SoK: Towards  the  science  of  security  and  privacy  in  machine  learning. *arXiv preprint arXiv:1611.03814*, 2016.
+<a name="papernot2016"> </a>[4] Nicolas Papernot, Patrick McDaniel, Arunesh Sinha, and Michael Wellman. Towards  the  science  of  security  and  privacy  in  machine  learning. *arXiv preprint arXiv:1611.03814*, 2016.
 
 <a name="jagielski2020"> </a>[5] Matthew  Jagielski,  Nicholas  Carlini,  David  Berthelot,  Alex  Kurakin,  and Nicolas Papernot. High accuracy and high fidelity extraction of neural networks. *arXiv preprint arXiv:1909.01838*, 2020.
 
@@ -659,6 +646,20 @@ Section 6 Model Extraction given class labels only
 <a name="le2013"> </a>[20] Quoc Le, Tamás Sarlós, and Alex Smola.  Fastfood-approximating kernelexpansions in loglinear time. In *Proceedings of the 30th International Conference on Machine Learning*, volume 85, 2013.
 
 <a name="kanagawa2019"> </a>[21] Motonobu Kanagawa and Philipp Hennig. Convergence guarantees for adaptive bayesian quadrature methods. In *Advances in Neural Information Processing Systems*, pages 6234–6245, 2019.
+
+<a name="kesarwani2018"> </a>[22] Manish Kesarwani, Bhaskar Mukhoty, Vijay Arya, and Sameep Mehta. Model extraction warning in mlaas paradigm. In *Proceedings of the 34th Annual Computer Security Applications Conference*, pages 371–380, 2018.
+
+<a name="lee2018"> </a>[23] Taesung Lee, Benjamin Edwards, Ian Molloy, and Dong Su. Defending against machine learning model stealing attacks using deceptive perturbations. *arXiv preprint arXiv:1806.00054*, 2018.
+
+<a name="shokri2017"> </a>[24] Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov. Membership inference attacks against machine learning models. In *2017 IEEE Symposium on Security and Privacy (S&P)*, pages 3–18, 2017.
+
+<a name="beygelzimer2010"> </a>[25] Alina Beygelzimer, Daniel J Hsu, John Langford, and Tong Zhang. Agnos-tic active learning without constraints.  In *Advances in Neural Information Processing systems*, pages 199–207, 2010.
+
+<a name="yashima2019"> </a>[26] Shingo Yashima, Atsushi Nitanda, and Taiji Suzuki.  Exponential conver-gence rates of classification errors on learning with sgd and random features. *arXiv preprint arXiv:1911.05350*, 2019.
+
+<a name="peltola2019"> </a>[27] Tomi Peltola, Mustafa Mert Celikok, Pedram Daee, and Samuel Kaski. Machine teaching of active sequential learners. In *Advances in Neural Information Processing Systems*, pages 11202–11213, 2019.
+
+<a name="caponnetto2007"> </a>[28] Andrea Caponnetto and Ernesto De Vito. Optimal rates for the regularized least-squares algorithm. *Foundations of Computational Mathematics*, 7(3):331–368, 2007.
 
 
 
