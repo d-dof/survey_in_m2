@@ -42,16 +42,17 @@ This version is 0.0
 - ICML = **I**nternational **C**onference on **M**achine **L**earning
 - NeurIPS = Advances in **Neu**ral **I**nformation **P**rocessing **S**ystems
 - ICLR = **I**nternational **C**onference on **L**earning **R**epresentations
-- AAAI = 
-- AISTATS
+- AAAI = **A**ssociation for the **A**dvancement of  **A**rtificial **I**ntellengence
+- AISTATS = International Conference on **A**rtificial **I**ntelligence and **Stat**istics
+- JMLR = **J**ournal of **M**achine **L**earning **R**esearch
 - S&P = IEEE Symposium on **S**ecurity **and** **P**rivacy
 - Security = USENIX **Security** Symposium
-- FAT = 
-- KDD = 
+- FAT = Conference on **F**airness, **A**ccountability, and **T**ransparency
+- KDD = ACM SIGKDD International Conference on **K**nowledge **D**iscovery in **D**ata mining
 - WPES = **W**orkshop on **P**rivacy in the **E**lectronic **S**ociety
-- Euro S&P = 
-- CIKM = 
-- ACSAC = 
+- Euro S&P = IEEE **Euro**pean Symposium on **S**ecurity **and** **P**rivacy
+- CIKM = **C**onference on **I**nformation and **K**nowledge **M**anagement
+- ACSAC = **A**nnual **C**omputer **S**ecurity **A**pplications **C**onference
 - FoCM = **Fo**undations of **C**omputational **M**athematics
 
 
@@ -69,7 +70,3 @@ This version is 0.0
 - Mainly, Translation by [DeepL](https://www.deepl.com/en/home) . Thanks for exellent service !!!
 - But I often don't check the precise expression, so it may be diffrent from Japanese expression or contain wrong expression by translation.
 - Each Figure is cited from each paper.
-
-
-
-# 

@@ -1,6 +1,6 @@
 # Survey in M2
 
-Created by Yuto Mori / 森 雄人 (D_dof)
+Created by Yuto Mori / 森 雄人 (D_dof)<img src="/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/icon.jpg" width="70px" />
 
 
 
@@ -46,16 +46,17 @@ This version is 0.0
 - ICML = **I**nternational **C**onference on **M**achine **L**earning
 - NeurIPS = Advances in **Neu**ral **I**nformation **P**rocessing **S**ystems
 - ICLR = **I**nternational **C**onference on **L**earning **R**epresentations
-- AAAI = 
-- AISTATS
+- AAAI = **A**ssociation for the **A**dvancement of  **A**rtificial **I**ntellengence
+- AISTATS = International Conference on **A**rtificial **I**ntelligence and **Stat**istics
+- JMLR = **J**ournal of **M**achine **L**earning **R**esearch
 - S&P = IEEE Symposium on **S**ecurity **and** **P**rivacy
 - Security = USENIX **Security** Symposium
-- FAT = 
-- KDD = 
+- FAT = Conference on **F**airness, **A**ccountability, and **T**ransparency
+- KDD = ACM SIGKDD International Conference on **K**nowledge **D**iscovery in **D**ata mining
 - WPES = **W**orkshop on **P**rivacy in the **E**lectronic **S**ociety
-- Euro S&P = 
-- CIKM = 
-- ACSAC = 
+- Euro S&P = IEEE **Euro**pean Symposium on **S**ecurity **and** **P**rivacy
+- CIKM = **C**onference on **I**nformation and **K**nowledge **M**anagement
+- ACSAC = **A**nnual **C**omputer **S**ecurity **A**pplications **C**onference
 - FoCM = **Fo**undations of **C**omputational **M**athematics
 
 
@@ -80,21 +81,41 @@ This version is 0.0
 
 
 
-## 【2020/04/20】**Optimal Rates for the Regularized Least-Squares Algorithm**【FoCM2006】
+## 【2020/04/21】**Random Feature Maps for Dot Product Kernels**【AISTATS2012】
 
-[**[Caponnetto and Vito, *FoCM*, 2006]**](#caponnetto2006)
+[**[Kar and Karnick, *AISTATS*, 2012]**](#kar2012)
+
+**keywords : Random Feature, Rademacher variable, Maclaurin expansion**
+
+
+
+内積で表現されるカーネルに対するRandom Featureの構成とその近似性能について理論的に評価した研究. [Rahimi and Recht, *NeurIPS*, 2007] では平行移動不変なカーネルに対する理論保証は与えていたが, 内積で表現されるカーネルに対する保証は与えられていなかった. ランダムな基底の作り方としては特徴写像 $\Phi$ をマクローリン展開してあげて, (この時係数は非負にできる) どの特徴の次元を使うか Rademacher 変数を単に用いて決定してあげれば良い. なお, この時に真のカーネルと近似した内積表現の $\sup$ の差が $\epsilon$ 以上になる確率は $O((1/ε)^{2d} \exp\{-Dε^2\})$ で与えられる.
+
+This paper presents a theoretical evaluation of the composition of random features and their approximate performance for kernels represented by the inner product. In [Rahimi and Recht, *NeurIPS*, 2007], theoretical guarantees are given for kernels that are translational invariant, but not for kernels that are represented by inner products. To make a random basis, you can expand the feature map $\Phi$ by Maclaurin expansion (at this time, the coefficients can be non-negative) and simply use the Rademacher variable to determine which feature dimension to use. Note that the probability that the difference of $\sup$ between the true kernel and the approximate inner product representation is greater than or equal to $\epsilon$ is given by $O((1/ε)^{2d} \exp \{-Dε^2\})$.
+
+
+
+
+
+## 【2020/04/20】**Optimal Rates for the Regularized Least-Squares Algorithm**【FoCM2007】
+
+[**[Caponnetto and Vito, *FoCM*, 2007]**](#caponnetto2007)
+
+**keywords : Regularization, Hilbert space, decay of eigenvalues, kernel method**
 
 
 
 ヒルベルト空間上の正則化つき二乗誤差回帰問題の経験誤差最小解と $\inf_{f \in \mathcal{H}} f$ との差の上界と下界の min-max レートなどを導出. このとき, 元の分布 $\rho$  とカーネル $K$ から定まる作用素の固有値の減衰レートを用いてバウンドしているのが特徴的. 一般的な Rademacher Complexity によるバウンドでは高々 $O(1/\sqrt{n})$ だったが, 精密に固有値まで見ると $O(1/n)$ にできる.
 
-The empirical error minimum solution of the regularized squared error regression problem on Hilbert space and the min-max rate of the upper and lower bounds of the difference between $\inf_{f \in \mathcal{H}} f$ and the empirical error minimum solution are derived. The important point is that they uses around using the decay rate of the eigenvalues of the operators determined from the original distribution $\rho$  and the kernel $K$. The bounds using the general Rademacher Complexity are as high as $O(1/\sqrt{n})$, but thinking of the eigenvalues, its rate are as high as $O(1/n)$.
+The min-max rates of the upper and lower bounds of the difference between the empirical error minimum solution of the regularized squared error regression problem on Hilbert space and  $\inf_{f \in \mathcal{H}} f$  are derived. The important point is that they uses the decay rate of the eigenvalues of the operators determined from the original distribution $\rho$  and the kernel $K$. The bounds using the general Rademacher Complexity are as high as $O(1/\sqrt{n})$, but thinking of the eigenvalues, its rate are as high as $O(1/n)$.
 
 
 
 ## 【2020/04/19】**Machine Teaching of Active Sequential Learners**【NeurIPS2019】
 
 [**[Peltola et al., *NeurIPS*, 2019]**](#peltola2019)
+
+**keywords : Teaching, MDP, multi-arm bandit, sequential**
 
 
 
@@ -108,7 +129,7 @@ They consider a pool-based situation for learning in which there are learners an
 
 ## 【2020/04/18】**Exponential Convergence Rates of Classification Errors on Learning with SGD and Random Features**【AISTATS2020 under review】
 
-**[Yashima et al., *AISTATS* under review, 2020]**
+[**[Yashima et al., *AISTATS* under review, 2020]**](#yashima2019)
 
 **keywords : kernel, random feature, SGD, classification error**
 
@@ -422,7 +443,7 @@ The oldest paper of Model Extraction. [Lowd and Meek, *KDD*, 2005] is famous in 
 
 
 
-![2020_03_30_lowd2005](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_30_lowd2005.png)
+![2020_03_30_lowd](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_30_lowd.png)
 
 
 
@@ -438,9 +459,9 @@ The oldest paper of Model Extraction. [Lowd and Meek, *KDD*, 2005] is famous in 
 
 Knockoff model that copies true black-box model is proposed. In [Tramer et al., 2016] setting, target model is unrealistic or simple (like Decision Tree, Linear Classifier), so they do experiments for more complex model like ResNet. This research has no theoretical analysis. The algorithm uses uniformly random method or reinforcement learning + active learning. Furthermore, they proposed that closed-world setting experiment (known training sets) and open-world setting experiment (unknown training sets)
 
-![2020_03_29_T. = FA(at)](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_29_T. = FA(at).png)
+![2020_03_29_orekondy1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_29_orekondy1.png)
 
-![2020_03_29_Adversary A](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_29_Adversary A.png)
+![2020_03_29_orekondy2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_29_orekondy2.png)
 
 
 
@@ -467,7 +488,7 @@ Stealing Hyperparameters. In this research, Hyperparameter is coefficient of reg
 
 
 
-![2020_03_28_TABLE I Loss functions and regularization terms of various](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_28_TABLE I Loss functions and regularization terms of various.png)
+![2020_03_28_wang](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_28_wang.png)
 
 
 
@@ -485,7 +506,7 @@ It is said that Kernel method requires the high computation complexity because o
 
 
 
-![2020_03_27_Algorithm 1 Random Fourier Features](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_27_Algorithm 1 Random Fourier Features.png)
+![2020_03_27_rahimi](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_27_rahimi.png)
 
 
 
@@ -501,13 +522,13 @@ It is said that Kernel method requires the high computation complexity because o
 
 This paper introduce the algorithm to extract 2-layer ReLU Neural Network from exact recovery. It is different from the re-training (active learning) approach. This research is strongly related to **Model Reconstruction from Model Explanations** [Milli et al., FAT, 2019]. Main difference is the THRET MODEL. The former research’s setting is stronger because **getting gradient w.r.t. x is unrealistic**. But this time, Their approach **only use confidence score output.** 
 
-![2020_03_26_Figure 1 Illustrating fidelity vs. accuracy. The solid blue](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_Figure 1 Illustrating fidelity vs. accuracy. The solid blue.png)
+![2020_03_26_jagielski1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_jagielski1)
 
 
 
 
 
-![2020_03_26_Model type](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_Model type.png)
+![2020_03_26_jagielski2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_jagielski2)
 
 
 
@@ -527,7 +548,7 @@ This paper is a survey paper related to the security for ML. This is almost comp
 
 
 
-![2020_03_25_Physical](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_25_Physical.png)
+![2020_03_25_papernot](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_25_papernot.png)
 
 
 
@@ -653,13 +674,12 @@ Section 6 Model Extraction given class labels only
 
 <a name="shokri2017"> </a>[24] Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov. Membership inference attacks against machine learning models. In *2017 IEEE Symposium on Security and Privacy (S&P)*, pages 3–18, 2017.
 
-<a name="beygelzimer2010"> </a>[25] Alina Beygelzimer, Daniel J Hsu, John Langford, and Tong Zhang. Agnos-tic active learning without constraints.  In *Advances in Neural Information Processing systems*, pages 199–207, 2010.
+<a name="beygelzimer2010"> </a>[25] Alina Beygelzimer, Daniel J Hsu, John Langford, and Tong Zhang. Agnostic active learning without constraints.  In *Advances in Neural Information Processing systems*, pages 199–207, 2010.
 
-<a name="yashima2019"> </a>[26] Shingo Yashima, Atsushi Nitanda, and Taiji Suzuki.  Exponential conver-gence rates of classification errors on learning with sgd and random features. *arXiv preprint arXiv:1911.05350*, 2019.
+<a name="yashima2019"> </a>[26] Shingo Yashima, Atsushi Nitanda, and Taiji Suzuki.  Exponential convergence rates of classification errors on learning with sgd and random features. *arXiv preprint arXiv:1911.05350*, 2019.
 
 <a name="peltola2019"> </a>[27] Tomi Peltola, Mustafa Mert Celikok, Pedram Daee, and Samuel Kaski. Machine teaching of active sequential learners. In *Advances in Neural Information Processing Systems*, pages 11202–11213, 2019.
 
 <a name="caponnetto2007"> </a>[28] Andrea Caponnetto and Ernesto De Vito. Optimal rates for the regularized least-squares algorithm. *Foundations of Computational Mathematics*, 7(3):331–368, 2007.
 
-
-
+<a name="kar2012"> </a>[29] Purushottam Kar and Harish Karnick. Random feature maps for dot product kernels. In *Artificial Intelligence and Statistics*, pages 583–591, 2012.
