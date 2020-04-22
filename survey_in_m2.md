@@ -79,6 +79,24 @@ This version is 0.0
 
 # Survey Diary
 
+## 【2020/04/22】**Deep Neural Network Fingerprinting by Conferrable Adversarial Examples**【2019】
+
+[**[Lukas et al., 2019]**](#lukas2019)
+
+**keywords : Model Extraction, Conferrable adversarial examples, Fingerprinting**
+
+
+
+モデルをデプロイしたときに敵対者がそのモデルをコピーすることを考える. このとき, 元のモデルを作った側 (Defender) がその敵対者のモデルが盗まれたもの (Surrogate Model) なのか関係ないもの (Reference Model) なのかを判別する方法を提案. 具体的には, Defender 側がモデルを訓練する際に, 自分で仮想的に敵を設定して Surrogate Model と Reference Model を作成する. ここでこれらを見分けるために Adversarial Example を用いる. というのも Adversarial Example には Transferability があることが報告されているので, 元のモデルに対して Adv-Ex を作ると, Surrogate Model も Reference Model も騙すことができる. しかしここで, Surrogate Model は騙せるが, 関係ない Reference Model は騙せない入力が作れる. これを "Conferrable Adversarial Example" と呼び, これを指紋として使う. つまり, 元のモデルと似たようなモデルだと同様に間違ってしまう入力を鍵のように使う.
+
+They suppose that an adversary copies a model when you deploy it. In this case, we propose a method to determine whether the model of the adversary's adversary is a stolen model (Surrogate Model) or an irrelevant model (Reference Model) by the side that created the original model (Defender). Specifically, when the Defender trains a model, it creates a Surrogate Model and a Reference Model by setting its own virtual enemies. Here, they use Adversarial Example to distinguish them. Since Adversarial Example has been reported to have transferability, they can deceive both Surrogate and Reference models by creating an Adv-Ex for the original model. Here, however, they can create inputs that can be fooled by the Surrogate Model, but not by the unrelated Reference Model. They call this "Conferrable Adversarial Example" and use it as a fingerprint. In other words, you can use the input as a key that would be wrong if it were a similar model to the original one.
+
+
+
+![2020_04_22_lukas](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_22_lukas.png)
+
+
+
 
 
 ## 【2020/04/21】**Random Feature Maps for Dot Product Kernels**【AISTATS2012】
@@ -683,3 +701,5 @@ Section 6 Model Extraction given class labels only
 <a name="caponnetto2007"> </a>[28] Andrea Caponnetto and Ernesto De Vito. Optimal rates for the regularized least-squares algorithm. *Foundations of Computational Mathematics*, 7(3):331–368, 2007.
 
 <a name="kar2012"> </a>[29] Purushottam Kar and Harish Karnick. Random feature maps for dot product kernels. In *Artificial Intelligence and Statistics*, pages 583–591, 2012.
+
+<a name="lukas2019"> </a>[30] Nils Lukas, Yuxuan Zhang, and Florian Kerschbaum. Deep neural network fingerprinting by conferrable adversarial examples. *arXiv preprint arXiv:1912.00888*, 2019.
