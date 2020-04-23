@@ -79,6 +79,26 @@ This version is 0.0
 
 # Survey Diary
 
+##【2020/04/23】**Neural Tangent Kernel: Convergence and Generalization in Neural Networks**【NeurIPS2018】
+
+[**[Jacot et al., *NeurIPS*, 2018]**](#jacot2018)
+
+**keywords : Neural Tangent Kernel, Initialization, Gaussian Process, Kernel Gradient**
+
+
+
+ニューラルネットワークの重みパラメータの初期化を $1/\sqrt{n_l}$ の正規分布に従うように取る. この時, ニューロン数を無限大に飛ばすとニューラルネットワークはガウス過程と見なすことができる. ニューラルネットの最適化を考えていくとこれは連続時間 $t$ に依存するパラメータ $\theta(t)$ の発展と共にあるカーネル関数が変わっていくものとしてみることができる. このカーネルを Neural Tangent Kernel と呼ぶ. またカーネルの変化, つまりカーネル勾配を計算することができ, その勾配に関連する線形微分方程式を解くことでニューラルネットの関数としての収束性の議論を行うことができる.
+
+they take the initialization of the weight parameters of the neural network to follow a normal distribution of $1/\sqrt{n_l}$. In this case, the neural network is considered to be a Gaussian process if the number of neurons is skipped to infinity. If they consider the optimization of the neural network, they can assume that the kernel function changes with the development of the parameter $\theta(t)$, which depends on the continuous time $t$. The kernel is called the Neural Tangent Kernel. They can also compute the kernel change, i.e., the kernel gradient, and by solving the linear differential equations related to the gradient, they can discuss the convergence as a function of a neural net.
+
+
+
+NTK : 
+
+$$\Theta^{(L)}(\theta) = \sum_{p=1}^{P} \partial_{\theta_p} F^{(L)}(\theta) \otimes \partial_{\theta_p} F^{(L)}(\theta)$$
+
+
+
 ## 【2020/04/22】**Deep Neural Network Fingerprinting by Conferrable Adversarial Examples**【2019】
 
 [**[Lukas et al., 2019]**](#lukas2019)
@@ -703,3 +723,5 @@ Section 6 Model Extraction given class labels only
 <a name="kar2012"> </a>[29] Purushottam Kar and Harish Karnick. Random feature maps for dot product kernels. In *Artificial Intelligence and Statistics*, pages 583–591, 2012.
 
 <a name="lukas2019"> </a>[30] Nils Lukas, Yuxuan Zhang, and Florian Kerschbaum. Deep neural network fingerprinting by conferrable adversarial examples. *arXiv preprint arXiv:1912.00888*, 2019.
+
+<a name="jacot2019"> </a>[31] Arthur Jacot, Franck Gabriel, and Cl´ement Hongler. Neural tangent kernel: Convergence and generalization in neural networks. In Advances in neural information processing systems, pages 8571–8580, 2018.
