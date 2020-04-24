@@ -10,7 +10,7 @@ Created by Yuto Mori / 森 雄人 (D_dof)<img src="/Users/moriyuto/Documents/stu
 
 ## Version
 
-This version is 0.0 
+This version is 0.1.
 
 
 
@@ -79,6 +79,26 @@ This version is 0.0
 
 # Survey Diary
 
+
+
+
+
+## 【2020/04/24】**Random Feature Expansions for Deep Gaussian Processes**【ICML2017】
+
+[**[Cutajar et al., *ICML*, 2017]**](#cutajar2017)
+
+**keywords : Deep Gaussian Process, Random Feature, Arccosine kernel**
+
+
+
+深層ガウス過程のカーネルの設計に Random Feature を用いた研究. 対象は回帰問題. Random Feature を用いることでガウス過程の学習・推論の際に計算を高速化することができる上に, 実験的には良い性能 (RMSEが小さい) が出ていることも確認している. ポイントとしては実際に学習ができるように Random Feature + MCMC を用いて勾配を計算しており, プラクティカルな面での貢献が大きい.
+
+A study on the design of kernels of deep Gaussian processes using random features. The target of the study is a regression problem. They have found that the use of random features not only speeds up the learning and inference of Gaussian processes, but also shows good experimental performance (small RMSE). The key point is that they use Random Feature + MCMC to compute the slope so that they can actually learn them, which contributes to the practical aspects of the simulation.
+
+![2020_04_24_cutajar](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_24_cutajar.png)
+
+
+
 ##【2020/04/23】**Neural Tangent Kernel: Convergence and Generalization in Neural Networks**【NeurIPS2018】
 
 [**[Jacot et al., *NeurIPS*, 2018]**](#jacot2018)
@@ -89,7 +109,7 @@ This version is 0.0
 
 ニューラルネットワークの重みパラメータの初期化を $1/\sqrt{n_l}$ の正規分布に従うように取る. この時, ニューロン数を無限大に飛ばすとニューラルネットワークはガウス過程と見なすことができる. ニューラルネットの最適化を考えていくとこれは連続時間 $t$ に依存するパラメータ $\theta(t)$ の発展と共にあるカーネル関数が変わっていくものとしてみることができる. このカーネルを Neural Tangent Kernel と呼ぶ. またカーネルの変化, つまりカーネル勾配を計算することができ, その勾配に関連する線形微分方程式を解くことでニューラルネットの関数としての収束性の議論を行うことができる.
 
-they take the initialization of the weight parameters of the neural network to follow a normal distribution of $1/\sqrt{n_l}$. In this case, the neural network is considered to be a Gaussian process if the number of neurons is skipped to infinity. If they consider the optimization of the neural network, they can assume that the kernel function changes with the development of the parameter $\theta(t)$, which depends on the continuous time $t$. The kernel is called the Neural Tangent Kernel. They can also compute the kernel change, i.e., the kernel gradient, and by solving the linear differential equations related to the gradient, they can discuss the convergence as a function of a neural net.
+They take the initialization of the weight parameters of the neural network to follow a normal distribution of $1/\sqrt{n_l}$. In this case, the neural network is considered to be a Gaussian process if the number of neurons is skipped to infinity. If they consider the optimization of the neural network, they can assume that the kernel function changes with the development of the parameter $\theta(t)$, which depends on the continuous time $t$. The kernel is called the Neural Tangent Kernel. They can also compute the kernel change, i.e., the kernel gradient, and by solving the linear differential equations related to the gradient, they can discuss the convergence as a function of a neural net.
 
 
 
@@ -560,13 +580,13 @@ It is said that Kernel method requires the high computation complexity because o
 
 This paper introduce the algorithm to extract 2-layer ReLU Neural Network from exact recovery. It is different from the re-training (active learning) approach. This research is strongly related to **Model Reconstruction from Model Explanations** [Milli et al., FAT, 2019]. Main difference is the THRET MODEL. The former research’s setting is stronger because **getting gradient w.r.t. x is unrealistic**. But this time, Their approach **only use confidence score output.** 
 
-![2020_03_26_jagielski1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_jagielski1)
+![2020_03_26_jagielski1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_jagielski1.png)
 
 
 
 
 
-![2020_03_26_jagielski2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_jagielski2)
+![2020_03_26_jagielski2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_jagielski2.png)
 
 
 
@@ -724,4 +744,6 @@ Section 6 Model Extraction given class labels only
 
 <a name="lukas2019"> </a>[30] Nils Lukas, Yuxuan Zhang, and Florian Kerschbaum. Deep neural network fingerprinting by conferrable adversarial examples. *arXiv preprint arXiv:1912.00888*, 2019.
 
-<a name="jacot2019"> </a>[31] Arthur Jacot, Franck Gabriel, and Cl´ement Hongler. Neural tangent kernel: Convergence and generalization in neural networks. In Advances in neural information processing systems, pages 8571–8580, 2018.
+<a name="jacot2019"> </a>[31] Arthur Jacot, Franck Gabriel, and Cl´ement Hongler. Neural tangent kernel: Convergence and generalization in neural networks. In *Advances in neural information processing systems*, pages 8571–8580, 2018.
+
+<a name="cutajar2017"> </a>[32] Kurt Cutajar, Edwin V Bonilla, Pietro Michiardi, and Maurizio Filippone. Random feature expansions for deep gaussian processes. In *Proceedings of the 34th International Conference on Machine Learning*, pages 884–893, 2017.
