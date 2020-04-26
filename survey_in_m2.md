@@ -10,7 +10,7 @@ Created by Yuto Mori / 森 雄人 (D_dof)<img src="/Users/moriyuto/Documents/stu
 
 ## Version
 
-This version is 0.1.
+This version is 0.2.
 
 
 
@@ -80,6 +80,34 @@ This version is 0.1.
 # Survey Diary
 
 
+
+## 【2020/04/26】**A Representer Theorem for Deep Kernel Learning**【JMLR2019】
+
+[**[Bohn et al., *JMLR*, 2019]**](#bohn2019)
+
+**keywords : Representer Theorem, Deep kernel, infinite case**
+
+
+
+RKHS上の関数に対する回帰問題を考える際に, 正則化項つき経験誤差最小化を考えるとその解がRKHS上の元の線形結合で書けるという定理を Representer Theorem (表現定理) という. 本研究ではDeep Kernel, すなわちカーネル関数の合成で書けるようなカーネルに対応するRKHS中の回帰問題の表現定理を扱っており, 実際これは Deep Kernel の場合でも成立する. 定理は経験誤差が有限個のサンプルで表現されている場合と, 無限個, つまり期待誤差の最小化の場合に分けて論じられている. 前者は通常の表現定理と同様の表現が得られ, 後者は Bochner 型の積分表示が得られる.
+
+Representer Theorem (Representation Theorem) is a theorem that the solution can be written by the original linear combination on RKHS if we consider empirical error minimization with regularization terms when considering the regression problem for a function on RKHS. This research deals with the representation theorem of regression problems in RKHS corresponding to Deep Kernel, i.e., a kernel that can be written by synthesizing kernel functions, and in fact, this theorem holds in the case of Deep Kernel. The theorem is discussed in two cases: the case where the empirical error is represented by a finite number of samples, and the case of an infinite number of samples, that is, the minimization of the expectation error. The former case gives a representation similar to that of the ordinary representation theorem, while the latter case gives a Bochner-type integral representation.
+
+
+
+
+
+## 【2020/04/25】**Sparse Spectrum Gaussian Process Regression**【JMLR2010】
+
+[**[Lázaro-Gredilla et al., *JMLR*, 2010]**](#lazaro2010)
+
+**keywords : Gaussian Process, Random Feature, SSGP**
+
+
+
+ガウス過程による回帰問題を解く際に, カーネルを Random Feature によって近似し, 特徴量の意味で Sparse な回帰を実現するアルゴリズムを提案. 面白いポイントとしては, ガウス過程の「学習」はカーネルのハイパーパラメータについて周辺尤度を大きくするようにチューニングすることとして位置付けられるが, Random Feature を考えるとこの 「Random Feature の位置」についても勾配法で最適化している点が挙げられる. 数値実験的に良さを検証しており, スパース性において類似する Fully Independent Training Conditional (FITC) ガウス過程回帰モデル と比較し, Normalized Mean Squared Error の意味で良いことを述べている. Random Feature の数を適当に減らすと過学習を防いでいるような結果も散見され, 非常に興味深い. Random Feature の数と正則化の間にはどんな関係があるのか調べられているのだろうか？
+
+When solving a regression problem with a Gaussian process, they propose an algorithm that approximates the kernel with a random feature and realizes a sparse regression in the sense of features. An interesting point is that the "learning" of the Gaussian process is positioned as tuning the hyperparameters of the kernel to increase the marginal likelihood, but considering Random Feature, the "position of Random Feature" is also optimized using the gradient method. They have experimentally verified the goodness of this method, and compared it with the Fully Independent Training Conditional (FITC) Gaussian process regression model, which is similar in sparsity, they have stated that it is better in the sense of normalized mean squared error. It is very interesting to note that reducing the number of random features prevent overfitting. What is the relationship between the number of random features and the regularization?
 
 
 
@@ -744,6 +772,11 @@ Section 6 Model Extraction given class labels only
 
 <a name="lukas2019"> </a>[30] Nils Lukas, Yuxuan Zhang, and Florian Kerschbaum. Deep neural network fingerprinting by conferrable adversarial examples. *arXiv preprint arXiv:1912.00888*, 2019.
 
-<a name="jacot2019"> </a>[31] Arthur Jacot, Franck Gabriel, and Cl´ement Hongler. Neural tangent kernel: Convergence and generalization in neural networks. In *Advances in neural information processing systems*, pages 8571–8580, 2018.
+<a name="jacot2018"> </a>[31] Arthur Jacot, Franck Gabriel, and Cl´ement Hongler. Neural tangent kernel: Convergence and generalization in neural networks. In *Advances in neural information processing systems*, pages 8571–8580, 2018.
 
 <a name="cutajar2017"> </a>[32] Kurt Cutajar, Edwin V Bonilla, Pietro Michiardi, and Maurizio Filippone. Random feature expansions for deep gaussian processes. In *Proceedings of the 34th International Conference on Machine Learning*, pages 884–893, 2017.
+
+<a name="lazaro2010"> </a>[33] Miguel Lázaro-Gredilla, Joaquin Quiñonero-Candela, Carl Edward Rasmussen, and An´ıbal R Figueiras-Vidal. Sparse spectrum gaussian process regression. *The Journal of Machine Learning Research*, 11(63):1865–1881, 2010.
+
+<a name="bohn2019"> </a>[34] Bastian Bohn, Christian Rieger, and Michael Griebel. A representer theorem for deep kernel learning. *Journal of Machine Learning Research*, 20(64):1–32, 2019.
+
