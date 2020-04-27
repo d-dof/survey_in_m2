@@ -81,6 +81,22 @@ This version is 0.2.
 
 
 
+##【2020/04/27】**Improving the Gaussian Process Sparse Spectrum Approximation by Representing Uncertainty in Frequency Inputs**【ICML2015】
+
+[**[Gal and Turner, *ICML*, 2015]**](#gal2015)
+
+**keywords : Random Feature, Gaussian Process, Variational Inference**
+
+
+
+[Lázaro-Gredilla et al., *JMLR*, 2010] ではガウス過程回帰モデルのカーネル関数の近似として Random Feature を用いる方法が提案されており, SSGP と名前が付けられていたが, SSGP は過学習する傾向が見られていた. そこで本研究では, Random Feature も入れた上で, Random Feature そのものの分布と, それに付随する Fourier 係数の最適化を変分推論で行うことでより良い学習方法を提案. 最終的に良さは数値実験内の RMSE で測っている. 途中の変分推論を導出する際の変形が「ベイズあるある」な, いかつい計算になっており, 読むのが些か大変.
+
+In [Lázaro-Gredilla et al., *JMLR*, 2010], a method to use a random feature as an approximation to the kernel function of a Gaussian process regression model was proposed, which was named SSGP, but SSGP tends to overlearn. However, SSGP tends to overfit. In this study, they propose a better learning method by using variational inference to optimize the distribution of the random feature itself and its associated fourier coefficients, while including the random feature. In the end, they use RMSE in their numerical experiments to measure the quality of the learning. The variation of the variational inference is a bit difficult to read because of the Bayesian variational nature of the calculations.
+
+
+
+
+
 ## 【2020/04/26】**A Representer Theorem for Deep Kernel Learning**【JMLR2019】
 
 [**[Bohn et al., *JMLR*, 2019]**](#bohn2019)
@@ -780,3 +796,4 @@ Section 6 Model Extraction given class labels only
 
 <a name="bohn2019"> </a>[34] Bastian Bohn, Christian Rieger, and Michael Griebel. A representer theorem for deep kernel learning. *Journal of Machine Learning Research*, 20(64):1–32, 2019.
 
+<a name="gal2015"> </a>[35] Yarin Gal and Richard Turner. Improving the gaussian process sparse spectrum approximation by representing uncertainty in frequency inputs. In *Proceedings of the 32nd International Conference on Machine Learning*, pages 655–664, 2015.
