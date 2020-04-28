@@ -6,7 +6,7 @@
 
 ## Version
 
-This version is 0.0 
+This version is 0.1 
 
 
 
@@ -27,8 +27,7 @@ This version is 0.0
 - Active Learning
 - Kernel Methods
 - Machine Teaching
-- Bayesian Quadrature
-
+- Gaussian Process
 
 
 ## Main Conferences & Jounals
@@ -54,7 +53,7 @@ This version is 0.0
 - CIKM = **C**onference on **I**nformation and **K**nowledge **M**anagement
 - ACSAC = **A**nnual **C**omputer **S**ecurity **A**pplications **C**onference
 - FoCM = **Fo**undations of **C**omputational **M**athematics
-
+- SICOMP = **SI**AM Journal on **Comp**uting
 
 
 ## Attention
