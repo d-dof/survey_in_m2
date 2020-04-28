@@ -6,7 +6,7 @@
 
 ## Version
 
-This version is 0.1 
+This version is 0.2 
 
 
 
