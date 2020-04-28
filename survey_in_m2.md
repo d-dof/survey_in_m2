@@ -31,7 +31,7 @@ This version is 0.2.
 - Active Learning
 - Kernel Methods
 - Machine Teaching
-- Bayesian Quadrature
+- Gaussian Process
 
 
 
@@ -58,6 +58,7 @@ This version is 0.2.
 - CIKM = **C**onference on **I**nformation and **K**nowledge **M**anagement
 - ACSAC = **A**nnual **C**omputer **S**ecurity **A**pplications **C**onference
 - FoCM = **Fo**undations of **C**omputational **M**athematics
+- SICOMP = **SI**AM Journal on **Comp**uting
 
 
 
@@ -78,6 +79,22 @@ This version is 0.2.
 
 
 # Survey Diary
+
+
+
+## 【2020/04/28】**Learning Decision Trees using the Fourier Spectrum**【SICOMP1993】
+
+[**[Kushilevitz and Mansour, *SICOMP*, 1993]**](#kushilevitz1993)
+
+**keywords : Decision Tree, Discrete Fourier transform, membership query**
+
+
+
+$\{0, 1\}^n$ から $\mathbb{R}$への回帰問題において, 各ノードでの判別が線形和で書かれるような決定木による学習を考える. この時, 決定木を離散フーリエ変換して学習することで多項式時間アルゴリズムを与える. 状況設定としては学習者側は $\{0, 1\}^n$上の任意の点にアクセスできる membership query での設定である. さらに, 学習する関数はフーリエ係数に 0 が多いという意味でスパースなものを取ってくることができる.
+
+In a regression problem from $\{0, 1\}^n$ to a real number, we consider training with a decision tree in which the discriminations at each node are written as a linear sum. In this case, they give a polynomial time algorithm by learning the decision tree by a discrete Fourier transform. The situation is that the learner can access any point on $\{0, 1\}^n$ in the membership query. Furthermore, the learned function can be sparse in the sense that the Fourier coefficient has many zeros.
+
+
 
 
 
@@ -173,7 +190,7 @@ $$\Theta^{(L)}(\theta) = \sum_{p=1}^{P} \partial_{\theta_p} F^{(L)}(\theta) \oti
 
 モデルをデプロイしたときに敵対者がそのモデルをコピーすることを考える. このとき, 元のモデルを作った側 (Defender) がその敵対者のモデルが盗まれたもの (Surrogate Model) なのか関係ないもの (Reference Model) なのかを判別する方法を提案. 具体的には, Defender 側がモデルを訓練する際に, 自分で仮想的に敵を設定して Surrogate Model と Reference Model を作成する. ここでこれらを見分けるために Adversarial Example を用いる. というのも Adversarial Example には Transferability があることが報告されているので, 元のモデルに対して Adv-Ex を作ると, Surrogate Model も Reference Model も騙すことができる. しかしここで, Surrogate Model は騙せるが, 関係ない Reference Model は騙せない入力が作れる. これを "Conferrable Adversarial Example" と呼び, これを指紋として使う. つまり, 元のモデルと似たようなモデルだと同様に間違ってしまう入力を鍵のように使う.
 
-They suppose that an adversary copies a model when you deploy it. In this case, we propose a method to determine whether the model of the adversary's adversary is a stolen model (Surrogate Model) or an irrelevant model (Reference Model) by the side that created the original model (Defender). Specifically, when the Defender trains a model, it creates a Surrogate Model and a Reference Model by setting its own virtual enemies. Here, they use Adversarial Example to distinguish them. Since Adversarial Example has been reported to have transferability, they can deceive both Surrogate and Reference models by creating an Adv-Ex for the original model. Here, however, they can create inputs that can be fooled by the Surrogate Model, but not by the unrelated Reference Model. They call this "Conferrable Adversarial Example" and use it as a fingerprint. In other words, you can use the input as a key that would be wrong if it were a similar model to the original one.
+They suppose that an adversary copies a model when you deploy it. In this case, they propose a method to determine whether the model of the adversary's adversary is a stolen model (Surrogate Model) or an irrelevant model (Reference Model) by the side that created the original model (Defender). Specifically, when the Defender trains a model, it creates a Surrogate Model and a Reference Model by setting its own virtual enemies. Here, they use Adversarial Example to distinguish them. Since Adversarial Example has been reported to have transferability, they can deceive both Surrogate and Reference models by creating an Adv-Ex for the original model. Here, however, they can create inputs that can be fooled by the Surrogate Model, but not by the unrelated Reference Model. They call this "Conferrable Adversarial Example" and use it as a fingerprint. In other words, you can use the input as a key that would be wrong if it were a similar model to the original one.
 
 
 
@@ -797,3 +814,5 @@ Section 6 Model Extraction given class labels only
 <a name="bohn2019"> </a>[34] Bastian Bohn, Christian Rieger, and Michael Griebel. A representer theorem for deep kernel learning. *Journal of Machine Learning Research*, 20(64):1–32, 2019.
 
 <a name="gal2015"> </a>[35] Yarin Gal and Richard Turner. Improving the gaussian process sparse spectrum approximation by representing uncertainty in frequency inputs. In *Proceedings of the 32nd International Conference on Machine Learning*, pages 655–664, 2015.
+
+<a name="kushilevitz1993"> </a>[36] Eyal Kushilevitz and Yishay Mansour. Learning decision trees using the fourier spectrum. *SIAM Journal on Computing*, 22(6):1331–1348, 1993.
