@@ -82,6 +82,19 @@ This version is 0.2.
 
 
 
+## 【2020/04/29】**Deep batch active learning by diverse, uncertain gradient lower bounds**【ICLR2020】
+[**[Ash, *ICLR*, 2020]**](#ash2020)
+
+
+
+ニューラルネットワークに対するバッチ型の能動学習の提案. バッチの点の多様性が高く, 情報量が多くなることを目的として次の点を決めたい. 「 勾配が大きい点ほど情報量が多い」という視点に立ち, 最終層のみにおける偏微分を行い, かつその勾配に対し, 疑似的にその点におけるラベルを用いてラベルづけを行う. というのも最終層における勾配はそのノルムをとってargmaxを取ると判別そのものになるからである. さらに, その勾配についてクラスタリングを, k-means++ の初期化アルゴリズムを用いて行い, その $k$  個のクラスタ中心を次のクエリとする. これは従来の k-DPPより計算が高速である.
+
+A proposal of active learning for a neural network with points increasing in each batch. From the point of view that "the larger the gradient, the more information there is," they perform partial differentiation in the final layer only and label the gradient by pseudo-labeling at the point, because the gradient in the final layer is discriminated by taking its norm and taking argmax. In addition, they use the initialization algorithm of k-means++ to determine the next point to query. This algorithm is faster than the conventional k-DPP.
+
+
+
+
+
 ## 【2020/04/28】**Learning Decision Trees using the Fourier Spectrum**【SICOMP1993】
 
 [**[Kushilevitz and Mansour, *SICOMP*, 1993]**](#kushilevitz1993)
@@ -816,3 +829,5 @@ Section 6 Model Extraction given class labels only
 <a name="gal2015"> </a>[35] Yarin Gal and Richard Turner. Improving the gaussian process sparse spectrum approximation by representing uncertainty in frequency inputs. In *Proceedings of the 32nd International Conference on Machine Learning*, pages 655–664, 2015.
 
 <a name="kushilevitz1993"> </a>[36] Eyal Kushilevitz and Yishay Mansour. Learning decision trees using the fourier spectrum. *SIAM Journal on Computing*, 22(6):1331–1348, 1993.
+
+<a name="ash2020"> </a>[37] Jordan T Ash, Chicheng Zhang, Akshay Krishnamurthy, John Langford, and Alekh Agarwal. Deep batch active learning by diverse, uncertain gradient lower bounds. In *International Conference on Learning Representations*, 2020.
