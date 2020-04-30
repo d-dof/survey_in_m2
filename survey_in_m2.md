@@ -29,6 +29,7 @@ This version is 0.2.
 - Robustness for Machine Learning models
 - Model Extraction
 - Active Learning
+- Semi-supervised Learning
 - Kernel Methods
 - Machine Teaching
 - Gaussian Process
@@ -82,8 +83,32 @@ This version is 0.2.
 
 
 
+## 【2020/04/30】**Semi-supervised Learning by Entropy Minimization**【NeurIPS2005】
+
+[**[Grandvalet and Bengio, *NeurIPS*, 2005]**](#grandvalet2005)
+
+**keywords : Semi-supervised Learning, Entropy Regularization, EM-Algorithm**
+
+
+
+半教師あり学習の新たな目的関数を提案. 尤度関数に, 「エントロピー正則化」と呼ばれる項を足した形で目的関数を表現する (ここでは対数尤度最大化問題として扱う). この正則化項は $- H(Y|X, Z; L_n)$ という形で表され, ラベルなしデータセットの予測が一様分布に近いものになっている時により小さくなることがわかる. つまり, 半教師ありデータセットに自信がない時は目的関数は小さくなってしまう. よりはっきりと分離できるようなデータに重点を置いて学習される.
+
+A new objective function for semi-supervised learning is proposed. The objective function is expressed as a likelihood function plus a term called "entropy regularization" (treated here as a log-likelihood maximization problem). This regularization term is expressed as $- H(Y|X, Z; L_n),$ and you can see that the regularization is smaller when the predictions of the unlabeled dataset are almost uniformly distributed. That is, the objective function is smaller when you are not confident about the semi-supervised dataset. The training focuses on data that are more clearly separable.
+
+
+
+Target Function (maximization w.r.t. $\theta$):
+
+$$C(\theta, \lambda) = \sum_{i=1}^{n} \log \left( \sum_{k=1}^K {z_i}^k f_k (x_i) \right) + \lambda \sum_{i=1}^n \sum_{k=1}^K g_k (x_i, z_i)\log g_k(x_i, z_i)$$
+
+
+
+
+
 ## 【2020/04/29】**Deep batch active learning by diverse, uncertain gradient lower bounds**【ICLR2020】
 [**[Ash, *ICLR*, 2020]**](#ash2020)
+
+**keywords : Active Learning, k-means++, gradient embedding**
 
 
 
@@ -106,6 +131,8 @@ A proposal of active learning for a neural network with points increasing in eac
 $\{0, 1\}^n$ から $\mathbb{R}$への回帰問題において, 各ノードでの判別が線形和で書かれるような決定木による学習を考える. この時, 決定木を離散フーリエ変換して学習することで多項式時間アルゴリズムを与える. 状況設定としては学習者側は $\{0, 1\}^n$上の任意の点にアクセスできる membership query での設定である. さらに, 学習する関数はフーリエ係数に 0 が多いという意味でスパースなものを取ってくることができる.
 
 In a regression problem from $\{0, 1\}^n$ to a real number, we consider training with a decision tree in which the discriminations at each node are written as a linear sum. In this case, they give a polynomial time algorithm by learning the decision tree by a discrete Fourier transform. The situation is that the learner can access any point on $\{0, 1\}^n$ in the membership query. Furthermore, the learned function can be sparse in the sense that the Fourier coefficient has many zeros.
+
+
 
 
 
@@ -154,6 +181,8 @@ Representer Theorem (Representation Theorem) is a theorem that the solution can 
 ガウス過程による回帰問題を解く際に, カーネルを Random Feature によって近似し, 特徴量の意味で Sparse な回帰を実現するアルゴリズムを提案. 面白いポイントとしては, ガウス過程の「学習」はカーネルのハイパーパラメータについて周辺尤度を大きくするようにチューニングすることとして位置付けられるが, Random Feature を考えるとこの 「Random Feature の位置」についても勾配法で最適化している点が挙げられる. 数値実験的に良さを検証しており, スパース性において類似する Fully Independent Training Conditional (FITC) ガウス過程回帰モデル と比較し, Normalized Mean Squared Error の意味で良いことを述べている. Random Feature の数を適当に減らすと過学習を防いでいるような結果も散見され, 非常に興味深い. Random Feature の数と正則化の間にはどんな関係があるのか調べられているのだろうか？
 
 When solving a regression problem with a Gaussian process, they propose an algorithm that approximates the kernel with a random feature and realizes a sparse regression in the sense of features. An interesting point is that the "learning" of the Gaussian process is positioned as tuning the hyperparameters of the kernel to increase the marginal likelihood, but considering Random Feature, the "position of Random Feature" is also optimized using the gradient method. They have experimentally verified the goodness of this method, and compared it with the Fully Independent Training Conditional (FITC) Gaussian process regression model, which is similar in sparsity, they have stated that it is better in the sense of normalized mean squared error. It is very interesting to note that reducing the number of random features prevent overfitting. What is the relationship between the number of random features and the regularization?
+
+
 
 
 
@@ -831,3 +860,5 @@ Section 6 Model Extraction given class labels only
 <a name="kushilevitz1993"> </a>[36] Eyal Kushilevitz and Yishay Mansour. Learning decision trees using the fourier spectrum. *SIAM Journal on Computing*, 22(6):1331–1348, 1993.
 
 <a name="ash2020"> </a>[37] Jordan T Ash, Chicheng Zhang, Akshay Krishnamurthy, John Langford, and Alekh Agarwal. Deep batch active learning by diverse, uncertain gradient lower bounds. In *International Conference on Learning Representations*, 2020.
+
+<a name="grandvalet2005"> </a>[38] Yves Grandvalet and Yoshua Bengio. Semi-supervised learning by entropy minimization. In *Advances in Neural Information Processing Systems*, pages 529–536, 2005.
