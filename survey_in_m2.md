@@ -83,6 +83,28 @@ This version is 0.2.
 
 
 
+
+
+##【2020/05/01】**Semi-Supervised Learning Using Gaussian Fields and Harmonic Functions**【ICML2003】
+
+[**[Zhu et al., *ICML*, 2003]**](#zhu2003)
+
+**keywords : Semi-supervised Learning, Graph Laplacian, Harmonic Function**
+
+
+
+データの間にグラフを (何らかの方法で) 構成し, 枝にガウスカーネルを用いて重みをつけ, 近傍を重み付けながら足し上げることでエネルギー関数を定義する. このとき, このエネルギー関数を最小化するような, ノードの重みベクトルを得ることとして半教師あり学習を定式化する. 二値分類問題について定式化されており, ラベルを $\{0, 1 \}$ と書くと, ラベルが0の点の周りは0になりやすいように学習が進行する. 最適解となる関数は調和関数になることが知られており, グラフと対応づけて考えると, 教師なしデータ上のグラフラプラシアンが0という条件に対応する. したがって, グラフラプラシアンが0となるように重みベクトルに関する線形方程式を解けば良いことになる.
+
+The energy function is defined by constructing a graph (in some way) between the data,  weighting as Gaussian kernel the branches and adding up the neighboring nodes. The semi-supervised learning is then formulated by obtaining a weight vector of nodes that minimizes the energy function. For the binary classification problem, if the label is written as $\{0, 1\}$, the learning proceeds in such a way that the label tends to be 0 around the point where the label is 0. It is known that the function with the optimal solution is a harmonic function, which corresponds to the condition that the graph Laplacian on the unsupervised data is 0 when considered as a correspondence to the graph. Therefore, you can solve the linear equations of the weight vectors so that the graph Laplacian is 0.
+
+
+
+
+
+![2020_05_01_zhu](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_01_zhu.png)
+
+
+
 ## 【2020/04/30】**Semi-supervised Learning by Entropy Minimization**【NeurIPS2005】
 
 [**[Grandvalet and Bengio, *NeurIPS*, 2005]**](#grandvalet2005)
@@ -862,3 +884,5 @@ Section 6 Model Extraction given class labels only
 <a name="ash2020"> </a>[37] Jordan T Ash, Chicheng Zhang, Akshay Krishnamurthy, John Langford, and Alekh Agarwal. Deep batch active learning by diverse, uncertain gradient lower bounds. In *International Conference on Learning Representations*, 2020.
 
 <a name="grandvalet2005"> </a>[38] Yves Grandvalet and Yoshua Bengio. Semi-supervised learning by entropy minimization. In *Advances in Neural Information Processing Systems*, pages 529–536, 2005.
+
+<a name="zhu2003"> </a>[39] Xiaojin Zhu, Zoubin Ghahramani, and John D Lafferty. Semi-supervised learning using gaussian fields and harmonic functions. In *Proceedings of the 20th International Conference on Machine learning*, pages 912–919, 2003.
