@@ -83,6 +83,20 @@ This version is 0.2.
 
 
 
+##【2020/05/02】**Realistic Evaluation of Deep Semi-Supervised Learning Algorithms**【NeurIPS2018】
+
+[**[Oliver et al., *NeurIPS*, 2018]**](#oliver2018)
+
+**keywords : Semi-supervised Learning, Evaluation, Deep Learning**
+
+
+
+半教師あり学習の様々な手法が提案されてきているが, それらが本当に改善につながっているのかを精密に実験した研究. 「対抗手法のハイパーパラメータチューニングは適切に行われているか」「見せたい手法が良くなるように不当に計算コストを使っていないか」「そもそも普通の教師あり学習モデルをしっかりと構築し, ベースラインとできているか」「転移学習と比較しているか」「検証データが訓練データより圧倒的に小さくないか」「半教師データサイズを適切に変化させて検証しているか」といった点に十分注意を払って実験を行ったところ, やはり報告されていたほどの数値改善が見られない例が存在した. 
+
+Various methods of semi-supervised learning have been proposed, and they have conducted precise experiments to see if they really lead to improvements. The experiments were carried out with careful attention to the following points: whether the hyperparameter tuning of the competing methods is appropriate, whether the computational cost is used unreasonably to improve the desired method, whether the standard supervised learning model is constructed and maintained as a baseline, whether it is compared with transfer learning, whether the verification data is overwhelmingly smaller than the training data, and whether the size of the semi-supervised data is changed appropriately. 
+
+
+
 
 
 ##【2020/05/01】**Semi-Supervised Learning Using Gaussian Fields and Harmonic Functions**【ICML2003】
@@ -886,3 +900,5 @@ Section 6 Model Extraction given class labels only
 <a name="grandvalet2005"> </a>[38] Yves Grandvalet and Yoshua Bengio. Semi-supervised learning by entropy minimization. In *Advances in Neural Information Processing Systems*, pages 529–536, 2005.
 
 <a name="zhu2003"> </a>[39] Xiaojin Zhu, Zoubin Ghahramani, and John D Lafferty. Semi-supervised learning using gaussian fields and harmonic functions. In *Proceedings of the 20th International Conference on Machine learning*, pages 912–919, 2003.
+
+<a name="oliver2018"> </a>[40] Avital Oliver, Augustus Odena, Colin A Raffel, Ekin Dogus Cubuk, and Ian Goodfellow. Realistic evaluation of deep semi-supervised learning algorithms. In *Advances in Neural Information Processing Systems*, pages 3235–3246, 2018.
