@@ -83,6 +83,22 @@ This version is 0.2.
 
 
 
+##【2020/05/03】**Pseudo-Label : The Simple and Efficient Semi-Supervised Learning Method for Deep Neural Networks**【ICML2013Workshop】
+
+[**[Lee., *ICML Workshop*, 2013]**](#lee2013)
+
+**keywords : Semi-supervised Learning, Pseudo-Labeling, Dropout, Denoising AutoEncoder**
+
+
+
+半教師あり学習の方法として擬似ラベリングを提案. 手元にラベルのないデータがある時, その学習中のモデルで擬似的にラベルのないデータをラベリングし, データセットに追加して学習する. 学習の際の特徴として, Denoising AutoEncoder を使って重みを初期化することと Dropout を用いている点を指摘. また, 損失関数の設計において, 教師あり損失と擬似教師あり損失の重み付けが重要であり, これを学習率によって制御する. 特に, 学習初めは普通に教師あり学習として進行し, ステップ数が事前に決めた閾値よりも多くなった時に擬似教師ラベルから来る損失の項の影響を強めていく.
+
+A pseudo-labeling method for semi-supervised learning is proposed. The features of the learning method are that the weights are initialized using Denoising AutoEncoder and that Dropout is used. In the design of the loss function, the weighting of supervised loss and pseudo-supervised loss is important and is controlled by the learning rate. In particular, the beginning of learning proceeds as supervised learning, and when the number of steps exceeds a predetermined threshold, the influence of the loss term from the pseudo-supervised label is strengthened.
+
+
+
+
+
 ##【2020/05/02】**Realistic Evaluation of Deep Semi-Supervised Learning Algorithms**【NeurIPS2018】
 
 [**[Oliver et al., *NeurIPS*, 2018]**](#oliver2018)
@@ -902,3 +918,5 @@ Section 6 Model Extraction given class labels only
 <a name="zhu2003"> </a>[39] Xiaojin Zhu, Zoubin Ghahramani, and John D Lafferty. Semi-supervised learning using gaussian fields and harmonic functions. In *Proceedings of the 20th International Conference on Machine learning*, pages 912–919, 2003.
 
 <a name="oliver2018"> </a>[40] Avital Oliver, Augustus Odena, Colin A Raffel, Ekin Dogus Cubuk, and Ian Goodfellow. Realistic evaluation of deep semi-supervised learning algorithms. In *Advances in Neural Information Processing Systems*, pages 3235–3246, 2018.
+
+<a name="lee2013"> </a>[41] Dong-Hyun Lee. Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks. In Workshop on challenges in representation learning, ICML, volume 3, page 2, 2013.
