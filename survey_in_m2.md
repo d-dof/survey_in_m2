@@ -60,12 +60,13 @@ This version is 0.2.
 - ACSAC = **A**nnual **C**omputer **S**ecurity **A**pplications **C**onference
 - FoCM = **Fo**undations of **C**omputational **M**athematics
 - SICOMP = **SI**AM Journal on **Comp**uting
+- COLT = Annual Conference on **Co**mputational **L**earning **T**heory
 
 
 
 ## Attention
 
-- 基本的に斜め読みの場合が多いため, 要約に間違いが含まれていることがあります. その点に十分ご注意下さい.
+- 基本的に斜め読みの場合が多いため, 要約に間違いが含まれている可能性があります. その点に十分ご注意下さい.
 - 翻訳には [DeepL](https://www.deepl.com/en/home) を主として利用させて頂いております. 非常に素晴らしいサービスに感謝致します.
 - しかし, 英語の内容については筆者がきちんと精査できていないことが多く, 文意が日本語と異なっている可能性や, 誤りを含んでいる可能性があります.
 - 図はその日にまとめた論文の内容から引用させて頂いています.
@@ -80,6 +81,36 @@ This version is 0.2.
 
 
 # Survey Diary
+
+
+
+## 【2020/05/05】**Semi-Supervised Support Vector Machines**【NeurIPS1999】
+
+[**[Bennett and Demiriz, *NeurIPS*, 1999]**](#bennett1999)
+
+**keywords : Semi-supervised Learning, SVM, Mixed Integer Programming**
+
+
+
+半教師あり Support Vector Machine (Semi-Supervised Support Vector Machine, S$^3$VM)を提案. 目的関数の項に 「1か-1か予測して, そのロスが小さい方を採用した時のロスの和」を教師なしセットに対して足し込んであげることで定式化する. これを解く際には混合整数計画になって, ソルバとしては CPLEX などを使用して解いている.
+
+They propose a semi-supervised Support Vector Machine (S$^3$VM). It is formulated by adding "the sum of the losses when the smaller loss is adopted, predicted to be 1 or -1" to the term of the objective function for the unsupervised set. This is a mixed integer programming, which is solved by using solvers such as CPLEX.
+
+
+
+##【2020/05/04】**Combining Labeled and Unlabeled Data with Co-Training**【COLT1998】
+
+[**[Blum and Mitchell, *COLT*, 1998]**](#blum1998)
+
+**keywords : Semi-supervised Learning, Co-Training**
+
+
+
+webページデータのように「ハイパーリンク」と「コンテンツの文字列」と情報が分かれているような時に, それぞれの特徴量から分類モデルを作成し, 同時に訓練する方法を提案. これを “Co-Training” と呼ぶ. 特にここでは, 片方の特徴量に関してしか教師ラベルが手に入らないような状況を考える. するとこれは半教師あり学習のセッティングとなる. 分かれている特徴量間に, 関係性を表す二部グラフを構成し, 辺がつながっているところは同じラベルであるとして学習させると, 教師ラベルが少ない条件下でも比較的安定して学習できることを示した. 
+
+They propose a method to make a classification model from each feature and train it at the same time when information is separated from "hyperlinks" and "content strings", such as web page data. They call this method "Co-Training". In particular, they consider a situation in which a teacher label is available only for one of the features. This is the setting for semi-supervised learning. In this study, they show that the semi-supervised learning can be relatively stable even under the condition that there are few supervised labels, where they construct a bipartite graph representing the relationship between the separated features and let them be trained with the same label when they are connected to each other. 
+
+
 
 
 
@@ -920,3 +951,7 @@ Section 6 Model Extraction given class labels only
 <a name="oliver2018"> </a>[40] Avital Oliver, Augustus Odena, Colin A Raffel, Ekin Dogus Cubuk, and Ian Goodfellow. Realistic evaluation of deep semi-supervised learning algorithms. In *Advances in Neural Information Processing Systems*, pages 3235–3246, 2018.
 
 <a name="lee2013"> </a>[41] Dong-Hyun Lee. Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks. In Workshop on challenges in representation learning, ICML, volume 3, page 2, 2013.
+
+<a name="blum1998"> </a>[42] Avrim Blum and Tom Mitchell. Combining labeled and unlabeled data with co-training. In *Proceedings of the 11th Annual Conference on Computational Learning Theory*, pages 92–100, 1998.
+
+<a name="bennett1999"> </a>[43] Kristin P Bennett and Ayhan Demiriz. Semi-supervised support vector machines. In *Advances in Neural Information Processing Systems*, pages 368–374, 1999.
