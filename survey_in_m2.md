@@ -61,6 +61,7 @@ This version is 0.2.
 - FoCM = **Fo**undations of **C**omputational **M**athematics
 - SICOMP = **SI**AM Journal on **Comp**uting
 - COLT = Annual Conference on **Co**mputational **L**earning **T**heory
+- TPMAI = IEEE **T**ransactions on **P**attern **A**nalysis and **M**achine **I**ntelligence
 
 
 
@@ -81,6 +82,21 @@ This version is 0.2.
 
 
 # Survey Diary
+
+
+
+##【2020/05/06】**Virtual Adversarial Training: A Regularization Method for Supervised and Semi-Supervised Learning**【TPAMI2018】
+[**[Miyato et al., *NeurIPS*, 2018]**](#miyato2018vat)
+
+**keywords : Semi-supervised Learning, VAT, Adversarial Training**
+
+
+
+Adversarial Training + Semi-Supervised Learning. 通常の Semi-Supervised Learning ではラベルに対して等方的なノイズを乗せることを考えていたが, Adversarial Example の研究からもわかるように, 方向をきちんと定めてあげることが敵対性にとっては重要であった. そこで本研究では半教師データに対し, Adversarial なノイズの方向を計算することで頑健性を増した学習方法を提案. 半教師ありデータ点では, 真のラベルとの乖離を計算することができないのでその段階における学習パラメータで代用するが, その損失の1次近似(勾配)は常に0になってしまう. そこで, 二次近似まで考え, ヘッセ行列の最大固有値を計算. その値を用いて近似的に誤差逆伝播を行う.
+
+Adversarial Training + Semi-Supervised Learning. In conventional semi-supervised learning, isotropic noise is multiplied by the label. In this study, they propose a robust learning method for semi-supervised data by calculating the adversarial direction of the noise, which increases the robustness. For the semi-supervised data points, they cannot compute the deviation from the true label, so they substitute learning parameters at that stage, but the first-order approximation (gradient) of the loss is always zero. Then, they consider the second-order approximation and calculate the maximum eigenvalue of the Hesse matrix. They use this value to approximate the error inverse propagation.
+
+
 
 
 
