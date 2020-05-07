@@ -85,8 +85,24 @@ This version is 0.2.
 
 
 
+##【2020/05/07】**Learning from Labeled and Unlabeled Data with Label Propagation**【2002】
+
+[**[Zhu and Ghahramani, 2002]**](#zhu2002learning)
+
+**keywords : Semi-supervised Learning, Label Propagation**
+
+
+
+「近いデータ点は近いラベルを持つはず」という仮定のもと Label Propagation と呼ばれる手法を用いることで半教師セットに対するラベルづけを行う方法. データ間にグラフを構成するタイプの方法で, 初期化はガウスカーネルで行う. その後, その重み付け行列をノードに関する重みベクトルに作用させることで, マルコフ連鎖のように次の状態を得る. その後, ラベルがついているノードに関しては再び0か1に重みをつけ直すことを行って, このアルゴリズムを繰り返す. そうすることで, ラベルが半教師ありセットに広がっていく.
+
+They establish a method called Label Propagation to label semi-supervised sets under the assumption that "close data points should have close labels". The method is of the type that constructs graphs between the data, and is initialized by the Gaussian kernel. Then, the weighting matrix is applied to the weight vectors about the nodes to obtain the following states as in a Markov chain. Then, for the labeled nodes, the algorithm is reweighted to 0 or 1 again, and the algorithm is repeated. In this way, the labels are extended to the semi-supervised set.
+
+![2020_05_07_zhu](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_07_zhu.png)
+
+
+
 ##【2020/05/06】**Virtual Adversarial Training: A Regularization Method for Supervised and Semi-Supervised Learning**【TPAMI2018】
-[**[Miyato et al., *NeurIPS*, 2018]**](#miyato2018vat)
+[**[Miyato et al., *TPAMI*, 2018]**](#miyato2018vat)
 
 **keywords : Semi-supervised Learning, VAT, Adversarial Training**
 
@@ -97,6 +113,8 @@ Adversarial Training + Semi-Supervised Learning. 通常の Semi-Supervised Learn
 Adversarial Training + Semi-Supervised Learning. In conventional semi-supervised learning, isotropic noise is multiplied by the label. In this study, they propose a robust learning method for semi-supervised data by calculating the adversarial direction of the noise, which increases the robustness. For the semi-supervised data points, they cannot compute the deviation from the true label, so they substitute learning parameters at that stage, but the first-order approximation (gradient) of the loss is always zero. Then, they consider the second-order approximation and calculate the maximum eigenvalue of the Hesse matrix. They use this value to approximate the error inverse propagation.
 
 
+
+$$r_{\mathrm{adv}} \thickapprox \mathrm{argmax}_{r} \{r^\top H(x, \hat{\theta})r \ | \ \|r\|_2 \le \varepsilon\}$$
 
 
 
@@ -971,3 +989,7 @@ Section 6 Model Extraction given class labels only
 <a name="blum1998"> </a>[42] Avrim Blum and Tom Mitchell. Combining labeled and unlabeled data with co-training. In *Proceedings of the 11th Annual Conference on Computational Learning Theory*, pages 92–100, 1998.
 
 <a name="bennett1999"> </a>[43] Kristin P Bennett and Ayhan Demiriz. Semi-supervised support vector machines. In *Advances in Neural Information Processing Systems*, pages 368–374, 1999.
+
+<a name="miyato2018vat"> </a>[44] Takeru Miyato, Shin-ichi Maeda, Masanori Koyama, and Shin Ishii. Virtual adversarial training: a regularization method for supervised and semisupervised learning. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 41(8):1979–1993, 2018.
+
+<a name="zhu2002learning"> </a>[45] Xiaojin Zhu and Zoubin Ghahramani. Learning from labeled and unlabeled data with label propagation. Technical report, 2002.
