@@ -85,6 +85,26 @@ This version is 0.2.
 
 
 
+
+
+##【2020/05/08】**Semi-supervised Learning with Deep Generative Models**【NeurIPS2014】
+
+[**[Kingma et al., *NeurIPS*, 2014]**](#kingma2014semi)
+
+**keywords : Semi-supervised Learning, Latent Variable, Variational Inference**
+
+
+
+半教師あり学習の目的変数として, 元々の判別関数による対数尤度に「潜在変数モデル」と「ラベルも条件に入れた潜在変数モデル」の和を足し上げて同時に最適化する. 最適化は解析解がわかりやすい正規分布やカテゴリカル分布で ELBO を近似し, 変分推論で行う. この単純化によって一般に計算が重くなりがちなベイズ推論であるのにもかかわらず, 近年提唱されている半教師あり学習の計算量と遜色ない速さとなる.
+
+As the objective variable of semi-supervised learning, they add the sum of the latent variable model and the latent variable model with labels as conditions to the log likelihood of the original discriminant function, and optimize it simultaneously. The optimization is performed by approximating ELBO with a normal or categorical distribution that is easy to understand for the analytical solution, and then by variational inference. This simplification makes Bayesian inference, which tends to be computationally heavy in general, no more lower than the computational complexity of semi-supervised learning, which has been proposed in recent years.
+
+
+
+![2020_05_08_kingma](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_08_kingma.png)
+
+
+
 ##【2020/05/07】**Learning from Labeled and Unlabeled Data with Label Propagation**【2002】
 
 [**[Zhu and Ghahramani, 2002]**](#zhu2002learning)
@@ -993,3 +1013,5 @@ Section 6 Model Extraction given class labels only
 <a name="miyato2018vat"> </a>[44] Takeru Miyato, Shin-ichi Maeda, Masanori Koyama, and Shin Ishii. Virtual adversarial training: a regularization method for supervised and semisupervised learning. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 41(8):1979–1993, 2018.
 
 <a name="zhu2002learning"> </a>[45] Xiaojin Zhu and Zoubin Ghahramani. Learning from labeled and unlabeled data with label propagation. Technical report, 2002.
+
+<a name="kingma2014semi"> </a>[46] Durk P Kingma, Shakir Mohamed, Danilo Jimenez Rezende, and Max Welling. Semi-supervised learning with deep generative models. In *Advances in Neural Information Processing Systems*, pages 3581–3589, 2014.
