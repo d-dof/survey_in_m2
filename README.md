@@ -25,9 +25,11 @@ This version is 0.2
 - Robustness for Machine Learning models
 - Model Extraction
 - Active Learning
+- Semi-supervised Learning
 - Kernel Methods
 - Machine Teaching
 - Gaussian Process
+- 
 
 
 ## Main Conferences & Jounals
@@ -54,6 +56,12 @@ This version is 0.2
 - ACSAC = **A**nnual **C**omputer **S**ecurity **A**pplications **C**onference
 - FoCM = **Fo**undations of **C**omputational **M**athematics
 - SICOMP = **SI**AM Journal on **Comp**uting
+- COLT = Annual Conference on **Co**mputational **L**earning **T**heory
+- TPMAI = IEEE **T**ransactions on **P**attern **A**nalysis and **M**achine **I**ntelligence
+
+
+
+
 
 
 ## Attention
