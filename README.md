@@ -29,7 +29,8 @@ This version is 0.2
 - Kernel Methods
 - Machine Teaching
 - Gaussian Process
-- 
+
+
 
 
 ## Main Conferences & Jounals
