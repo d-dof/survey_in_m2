@@ -85,6 +85,20 @@ This version is 0.2.
 
 
 
+## 【2020/05/09】**Poisoning Attacks against Support Vector Machines**【ICML2012】
+
+[**[Biggio et al., *ICML*, 2012]**](#biggio2012poisoning)
+
+**keywords : Poisoning, SVM, KKT condition**
+
+
+
+訓練データを少しだけ変えてロスを大きく増大させるようなデータを, 訓練時に意図的に紛れ込ませる手法を Poisoning という. 本研究ではSVMに対する Poisioning を提案. SVM の解は KKT 条件を満たすように学習するので, これを保存しつつ 最適解を少しずらす方向に勾配を足しあげる. 手法の良さは数値的に検証しており, 人工データとMNISTで実験している.
+
+Poisoning is a method to intentionally blend data that increases the loss by changing the training data slightly. In this study, they propose poisioning for the SVM. The solution of the SVM is trained to satisfy the KKT condition, so they add a gradient in the direction of shifting the optimal solution slightly while preserving the solution. The merits of the method have been verified numerically, and experiments have been carried out with artificial data and MNIST.
+
+
+
 
 
 ##【2020/05/08】**Semi-supervised Learning with Deep Generative Models**【NeurIPS2014】
@@ -336,6 +350,8 @@ When solving a regression problem with a Gaussian process, they propose an algor
 A study on the design of kernels of deep Gaussian processes using random features. The target of the study is a regression problem. They have found that the use of random features not only speeds up the learning and inference of Gaussian processes, but also shows good experimental performance (small RMSE). The key point is that they use Random Feature + MCMC to compute the slope so that they can actually learn them, which contributes to the practical aspects of the simulation.
 
 ![2020_04_24_cutajar](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_24_cutajar.png)
+
+
 
 
 
@@ -1015,3 +1031,5 @@ Section 6 Model Extraction given class labels only
 <a name="zhu2002learning"> </a>[45] Xiaojin Zhu and Zoubin Ghahramani. Learning from labeled and unlabeled data with label propagation. Technical report, 2002.
 
 <a name="kingma2014semi"> </a>[46] Durk P Kingma, Shakir Mohamed, Danilo Jimenez Rezende, and Max Welling. Semi-supervised learning with deep generative models. In *Advances in Neural Information Processing Systems*, pages 3581–3589, 2014.
+
+<a name="biggio2012poisoning"> </a>[47] Battista Biggio, Blaine Nelson, and Pavel Laskov. Poisoning attacks against support vector machines. In *Proceedings of the 29th International Conference on Machine Learning*, pages 1467–1474, 2012.
