@@ -85,6 +85,24 @@ This version is 0.2.
 
 
 
+##【2020/05/10】**Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks**【NeurIPS2018】
+
+[**[Shafahi et al., *NeurIPS*, 2018]**](#shafahi2018poison)
+
+**keywords : Poisoning, Neural Networks, base instance, forward-backward-splitting (proximal gradient)**
+
+
+
+ニューラルネットに対する Poisoning Attack の手法について述べた論文. 状況設定として, 特定の入力 $t$ をうまく学習できないように, 訓練データの中に意図的に変更を加えたようなデータ (つまり毒) を注入するという設定. この時, 他の Poisoning の手法と異なり, 「実際に存在する, ラベルは違うデータ」に寄せるように学習することを考える. 「$t$ に特徴(softmax にかける前のベクトル)が似ている」+ 「ある他のクラスのデータ $b$ に入力として似ている」ような目的関数を考え, これを最小化するような入力として Poisoning の問題を定式化する. 問題はforward-backward-splitting というアルゴリズムで解く. 数値実験的に手法の良さを検証しており, 「重みの事前学習が行われているセッティングの時は提案手法の Poisoning がうまくいく」が, 「End-to-End で学習する時は提案手法はノイズとしてうまく処理され, そのままで攻撃がうまくいかない」ことを確認しているのが興味深い.
+
+A paper describing a method of poisoning attacks on neural nets, in which a contextual setting is to inject data that is intentionally modified (i.e., poisoned) into the training data so that a particular input $t$ cannot be successfully trained. In a situational setting, they intentionally inject modified data (i.e., poison) into the training data so that a particular input $t$ cannot be successfully trained. In this case, unlike other poisoning methods, they consider that the training data is trained on "real, but differently labeled data". They consider an objective function such as "similar features (vectors before softmax) to $t$" + "similar as input to some other class of data $b$", and formulate the problem of poisoning as input that minimizes it. The problem is solved by an algorithm called forward-backward-splitting. They experimentally verify the goodness of the method, and it is interesting that they confirm that the proposed method's poisoning works well in the setting where weights are pre-trained, but that the proposed method is treated well as noise in end-to-end training, and the attack does not work as it is.
+
+
+
+$$ p = \arg\min_{x} \|f(x) - f(t)\|_2^{2} + \beta \|x - b\|_2^2$$
+
+
+
 ## 【2020/05/09】**Poisoning Attacks against Support Vector Machines**【ICML2012】
 
 [**[Biggio et al., *ICML*, 2012]**](#biggio2012poisoning)
@@ -1033,3 +1051,5 @@ Section 6 Model Extraction given class labels only
 <a name="kingma2014semi"> </a>[46] Durk P Kingma, Shakir Mohamed, Danilo Jimenez Rezende, and Max Welling. Semi-supervised learning with deep generative models. In *Advances in Neural Information Processing Systems*, pages 3581–3589, 2014.
 
 <a name="biggio2012poisoning"> </a>[47] Battista Biggio, Blaine Nelson, and Pavel Laskov. Poisoning attacks against support vector machines. In *Proceedings of the 29th International Conference on Machine Learning*, pages 1467–1474, 2012.
+
+<a name="shafahi2018poison"> </a>[48] Ali Shafahi, W Ronny Huang, Mahyar Najibi, Octavian Suciu, Christoph Studer, Tudor Dumitras, and Tom Goldstein. Poison frogs! targeted cleanlabel poisoning attacks on neural networks. In *Advances in Neural Information Processing Systems*, pages 6103–6113, 2018.
