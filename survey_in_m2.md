@@ -85,6 +85,20 @@ This version is 0.2.
 
 
 
+## 【2020/05/11】**A Unified Framework for Data Poisoning Attack to Graph-based Semi-supervised Learning**【NeurIPS2019】
+
+[**[Liu et al., *NeurIPS*, 2019]**](#liu2019unified)
+
+**keywords : Poisoning, Semi-supervised Learning, G-SSL, trust-region method, bandit**
+
+
+
+今までそもそもあまり考えて来られなかった, グラフベースの半教師あり学習に対する Poisoing を回帰問題と判別問題を統合する統一的な視点から定式化した論文. 最適化問題としては統一的にはなるが, 実際に解く際には異なるアルゴリズムを用いて解く. 回帰問題の際はグラフの構造を反映した行列 $H$ が出てくるが, これが正定値とは限らない状態で二次計画問題を解く必要が出てくる. そのため信頼領域法を用いてこれを解く. これに関しては収束性と反復計算量のオーダーを導出している. また判別問題ではノイズの加え方をバンディット問題的に定式化することでアルゴリズムを構築している.
+
+This paper formulates Poisoing for graph-based semi-supervised learning, which has not been considered much in the past, from a unified perspective that integrates regression and discriminant problems. Although it is unified as an optimization problem, they use different algorithms for the actual solution. In the regression problem, a matrix $H$, which reflects the graph structure, emerges, but it is necessary to solve the quadratic programming problem when this matrix is not necessarily positive definite. Therefore, they use the trust regioon method to solve the quadratic programming problem. The order of convergence and iterative complexity are derived for this problem. For the discriminant problem, they formulate a bandit-like formulation of the noise addition method.
+
+
+
 ##【2020/05/10】**Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks**【NeurIPS2018】
 
 [**[Shafahi et al., *NeurIPS*, 2018]**](#shafahi2018poison)
@@ -1053,3 +1067,5 @@ Section 6 Model Extraction given class labels only
 <a name="biggio2012poisoning"> </a>[47] Battista Biggio, Blaine Nelson, and Pavel Laskov. Poisoning attacks against support vector machines. In *Proceedings of the 29th International Conference on Machine Learning*, pages 1467–1474, 2012.
 
 <a name="shafahi2018poison"> </a>[48] Ali Shafahi, W Ronny Huang, Mahyar Najibi, Octavian Suciu, Christoph Studer, Tudor Dumitras, and Tom Goldstein. Poison frogs! targeted cleanlabel poisoning attacks on neural networks. In *Advances in Neural Information Processing Systems*, pages 6103–6113, 2018.
+
+<a name="liu2019unified"> </a>[49] Xuanqing Liu, Si Si, Jerry Zhu, Yang Li, and Cho-Jui Hsieh. A unified framework for data poisoning attack to graph-based semi-supervised learning. In *Advances in Neural Information Processing Systems*, pages 9780– 9790, 2019.
