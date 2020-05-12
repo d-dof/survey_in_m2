@@ -85,6 +85,20 @@ This version is 0.2.
 
 
 
+## 【2020/05/12】**Data Poisoning Attacks on Factorization-Based Collaborative Filtering**【NeurIPS2016】
+
+[**[Li et al., *NeurIPS*, 2016]**](#li2016data)
+
+**keywords : Poisoning, Collaborative Filtering, Alternating Minimization, PGA, SGLD**
+
+
+
+協調フィルタリングに対する Poisoning アルゴリズムの提案. 正則化つき低ランク行列分解の問題設定と正則化つき核ノルム最小化の設定それぞれに対して攻撃アルゴリズムを提案している. 最適化問題として攻撃はある $R(\hat{M}, M)$ を最大化するように定式化される. 低ランク行列分解の時は Projected Gradient Ascent を $M$ について用いることで, その最適化問題を解く. また, 核ノルム最小化の時は SGLD を用いて解く. また, より真のユーザのような解を得るため, $M$ の初期化として事前分布を考え, SGLD で解く方法についても提案. 数値実験において RMSE が上昇していることを確認することで検証. 防御方法の提案までは行っていない.
+
+They propose a poisoning algorithm for collaborative filtering. They propose attack algorithms for the regularized low-rank matrix factorization problem and the regularized nuclear norm minimization problem, respectively. For the optimization problem, the attack is formulated in such a way that it maximizes a certain $R(\hat{M}, M)$. For low-rank matrix decomposition, the optimization problem is solved by using Projected Gradient Ascent for $M$. For the nuclear norm minimization, they use SGLD to solve the optimization problem. In order to obtain a truer user-like solution, a prior distribution is considered as an initialization of $M$, and a method of solving the optimization problem with SGLD is also proposed. They verify this by confirming that RMSE is increasing in numerical experiments. They have not yet proposed a method to prevent the increase of RMSE.
+
+
+
 ## 【2020/05/11】**A Unified Framework for Data Poisoning Attack to Graph-based Semi-supervised Learning**【NeurIPS2019】
 
 [**[Liu et al., *NeurIPS*, 2019]**](#liu2019unified)
@@ -1069,3 +1083,5 @@ Section 6 Model Extraction given class labels only
 <a name="shafahi2018poison"> </a>[48] Ali Shafahi, W Ronny Huang, Mahyar Najibi, Octavian Suciu, Christoph Studer, Tudor Dumitras, and Tom Goldstein. Poison frogs! targeted cleanlabel poisoning attacks on neural networks. In *Advances in Neural Information Processing Systems*, pages 6103–6113, 2018.
 
 <a name="liu2019unified"> </a>[49] Xuanqing Liu, Si Si, Jerry Zhu, Yang Li, and Cho-Jui Hsieh. A unified framework for data poisoning attack to graph-based semi-supervised learning. In *Advances in Neural Information Processing Systems*, pages 9780– 9790, 2019.
+
+<a name="li2016data"> </a>[50]  Bo Li, Yining Wang, Aarti Singh, and Yevgeniy Vorobeychik. Data poisoning attacks on factorization-based collaborative filtering. In *Advances in Neural Information Processing Systems*, pages 1885–1893, 2016.
