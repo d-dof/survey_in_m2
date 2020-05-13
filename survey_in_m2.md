@@ -33,6 +33,7 @@ This version is 0.2.
 - Kernel Methods
 - Machine Teaching
 - Gaussian Process
+- Poisoning
 
 
 
@@ -85,6 +86,30 @@ This version is 0.2.
 
 
 
+## 【2020/05/13】**Nonlinear random matrix theory for deep learning**【NeurIPS2017】
+
+[**[Pennington and Worah, *NeurIPS*, 2017]**](#pennington2017nonlinear)
+
+**keywords : Random Matrix, Random Feature, resolvent**
+
+
+
+非線形性のため, ニューラルネットに対するランダム行列を用いた解析はあまり行われてこなかった. 本研究ではその克服のため, $Y = f(WX)$ としたとき, $M = m^{-1} Y^{\top} Y$ と定義し(グラム行列), これのレゾルベントのトレースの期待値 $G$ を用いて訓練誤差最小解の性質を論じる. この時, $G$ がある4次多項式の解として特徴付けられる定理について述べ, これを用いて, 活性化したときに特異値の分布が不変な活性化関数の存在や Random Feature を用いたときの最小解の性質などについて考察している. 
+
+Due to the nonlinearity, random matrices for neural nets have not been used in many analyses. In order to overcome this problem, they define $M = m^{-1} Y^{\top} Y$  (a gram matrix) for $Y = f(WX)$  and discuss the properties of the minimum training error solution using the expected value of the resolvent trace of $G$. In this work, they discuss the theorem that $G$ can be characterized as a solution of some fourth-order polynomial. The theorem is used for the existence of an activation function whose singular value distribution is invariant when activated using this theorem is discussed and the property of minimum using random feature. 
+
+
+
+$\phi = \frac{n_0}{m}, \psi = \frac{n_0}{n_1}$, 
+$$
+G(z) = \frac{\psi}{z} P(\frac{1}{z \psi}) + \frac{1 - \psi}{z}
+$$
+
+
+
+
+
+
 ## 【2020/05/12】**Data Poisoning Attacks on Factorization-Based Collaborative Filtering**【NeurIPS2016】
 
 [**[Li et al., *NeurIPS*, 2016]**](#li2016data)
@@ -127,7 +152,10 @@ A paper describing a method of poisoning attacks on neural nets, in which a cont
 
 
 
-$$ p = \arg\min_{x} \|f(x) - f(t)\|_2^{2} + \beta \|x - b\|_2^2$$
+$$
+p = \arg\min_{x} \|f(x) - f(t)\|_2^{2} + \beta \|x - b\|_2^2
+$$
+
 
 
 
@@ -194,7 +222,10 @@ Adversarial Training + Semi-Supervised Learning. In conventional semi-supervised
 
 
 
-$$r_{\mathrm{adv}} \thickapprox \mathrm{argmax}_{r} \{r^\top H(x, \hat{\theta})r \ | \ \|r\|_2 \le \varepsilon\}$$
+$$
+r_{\mathrm{adv}} \thickapprox \mathrm{argmax}_{r} \{r^\top H(x, \hat{\theta})r \ | \ \|r\|_2 \le \varepsilon\}
+$$
+
 
 
 
@@ -296,7 +327,10 @@ A new objective function for semi-supervised learning is proposed. The objective
 
 Target Function (maximization w.r.t. $\theta$):
 
-$$C(\theta, \lambda) = \sum_{i=1}^{n} \log \left( \sum_{k=1}^K {z_i}^k f_k (x_i) \right) + \lambda \sum_{i=1}^n \sum_{k=1}^K g_k (x_i, z_i)\log g_k(x_i, z_i)$$
+$$
+C(\theta, \lambda) = \sum_{i=1}^{n} \log \left( \sum_{k=1}^K {z_i}^k f_k (x_i) \right) + \lambda \sum_{i=1}^n \sum_{k=1}^K g_k (x_i, z_i)\log g_k(x_i, z_i)
+$$
+
 
 
 
@@ -416,8 +450,10 @@ They take the initialization of the weight parameters of the neural network to f
 
 
 NTK : 
+$$
+\Theta^{(L)}(\theta) = \sum_{p=1}^{P} \partial_{\theta_p} F^{(L)}(\theta) \otimes \partial_{\theta_p} F^{(L)}(\theta)
+$$
 
-$$\Theta^{(L)}(\theta) = \sum_{p=1}^{P} \partial_{\theta_p} F^{(L)}(\theta) \otimes \partial_{\theta_p} F^{(L)}(\theta)$$
 
 
 
@@ -1085,3 +1121,6 @@ Section 6 Model Extraction given class labels only
 <a name="liu2019unified"> </a>[49] Xuanqing Liu, Si Si, Jerry Zhu, Yang Li, and Cho-Jui Hsieh. A unified framework for data poisoning attack to graph-based semi-supervised learning. In *Advances in Neural Information Processing Systems*, pages 9780– 9790, 2019.
 
 <a name="li2016data"> </a>[50]  Bo Li, Yining Wang, Aarti Singh, and Yevgeniy Vorobeychik. Data poisoning attacks on factorization-based collaborative filtering. In *Advances in Neural Information Processing Systems*, pages 1885–1893, 2016.
+
+<a name="pennington2017nonlinear"> </a>[51] Jeffrey Pennington and Pratik Worah. Nonlinear random matrix theory for deep learning. In *Advances in Neural Information Processing Systems*, pages 2637–2646, 2017.
+
