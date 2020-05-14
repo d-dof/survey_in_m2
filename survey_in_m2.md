@@ -18,8 +18,12 @@ This version is 0.2.
 
 - これは森のサーベイをサーベイ時の時系列順にまとめたものです.
 - 日記代わりに大体1日に1つ論文をまとめるようにしています. 
-
 - (このサーベイは次の論文の出版に繋がっています. ご興味があれば是非一度読んでみて下さい.)
+
+
+
+- This is mori's survey in order.
+- This is almost a diary.
 
 
 
@@ -86,6 +90,24 @@ This version is 0.2.
 
 
 
+## 【2020/05/14】**Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results**【NeurIPS2017】
+
+[**[Tarvainen and Valpola, *NeurIPS*, 2017]**](#tarvainen2017mean)
+
+**keywords : Semi-supervised Learning, Mean Teacher, Temporal Ensembling**
+
+
+
+Temporal Ensembling と呼ばれる半教師あり学習の方法をさらに改善した Mean Teacher という手法を提案. これは訓練中の連続したモデルの重みを平均することで「教師モデル」を作り出すことに由来している. 特に今回はモデルの「指数移動平均 (EMA)」を用いて教師モデルを構成する. そして, この教師モデルを用いてノイズを加えた pseudo-labeling を半教師あり集合に対して行うことで学習をする. 他の半教師あり学習の手法と数値実験的に比べており, ラベルの数・training loss などの観点から手法の評価を行っている. ハイパラとして EMA の重みは重要であることを指摘している.
+
+They propose a method called Mean Teacher, which is a further improvement on the semi-supervised learning method called Temporal Ensembling. This method is derived from the fact that a "teacher model" is created by averaging the weights of a continuous model during training. In this paper, the exponential moving average (EMA) of the model is used to construct the teacher model. Then, they use the model to do pseudo-labeling on the semi-supervised set added noises. The method is compared with other semi-supervised learning methods experimentally and evaluated in terms of number of labels and training loss. They point out that the weight of the EMA is important as a high parameter.
+
+![2020_05_15_tarvainen](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_15_tarvainen.png)
+
+
+
+
+
 ## 【2020/05/13】**Nonlinear random matrix theory for deep learning**【NeurIPS2017】
 
 [**[Pennington and Worah, *NeurIPS*, 2017]**](#pennington2017nonlinear)
@@ -102,7 +124,7 @@ Due to the nonlinearity, random matrices for neural nets have not been used in m
 
 $\phi = \frac{n_0}{m}, \psi = \frac{n_0}{n_1}$, 
 $$
-G(z) = \frac{\psi}{z} P(\frac{1}{z \psi}) + \frac{1 - \psi}{z}
+G(z) = \frac{\psi}{z} P\left(\frac{1}{z \psi}\right) + \frac{1 - \psi}{z}
 $$
 
 
@@ -1123,4 +1145,6 @@ Section 6 Model Extraction given class labels only
 <a name="li2016data"> </a>[50]  Bo Li, Yining Wang, Aarti Singh, and Yevgeniy Vorobeychik. Data poisoning attacks on factorization-based collaborative filtering. In *Advances in Neural Information Processing Systems*, pages 1885–1893, 2016.
 
 <a name="pennington2017nonlinear"> </a>[51] Jeffrey Pennington and Pratik Worah. Nonlinear random matrix theory for deep learning. In *Advances in Neural Information Processing Systems*, pages 2637–2646, 2017.
+
+<a name="tarvainen2017mean"> </a>[52] Antti Tarvainen and Harri Valpola. Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results. In *Advances in Neural Information Processing Systems,* pages 1195– 1204, 2017.
 
