@@ -90,6 +90,24 @@ This version is 0.2.
 
 
 
+##【2020/05/15】**Learning with Local and Global Consistency**【NeurIPS2004】
+
+[**[Zhou et al., *NeurIPS*, 2004]**](#zhou2004learning)
+
+**keywords : Semi-supervised Learning, transductive learning**
+
+
+
+近くにあるデータは似たようなラベルを持つという Consistency を用いて半教師あり学習を行う. 半教師に仮想的なラベルを与える F の構成として, はじめは局所的なラベルの Consistency だけを目的関数に反映させるが, 最終的には大域的な Consistency までを考慮したアルゴリズムとして定式化する. しかし, 実はこれはステップ数無限大の極限では $(I - \alpha S)^{-1} Y$ という演算で得られる. したがってこれをラベルなしデータセットに対するラベルとしてあげればよい. また 「良いフィッティングはそんなに初期値からずれない」という項を足し上げて正則化つきの問題としても定式化できるが, この場合も同様に行列演算でラベルなしデータセットに対する疑似ラベルを与える関数を得ることができる.
+
+They propose semi-supervised learning using the consistency that nearby data have similar labels. As a construct of F, which gives hypothetical labels to the semi-supervisors, it initially reflect only the local consistency of the labels in the target function, but eventually formulate an algorithm that takes into account the global consistency. However, in fact, this can be obtained in the limit of infinite number of steps by the operation $(I -\alpha S)^{-1} Y$. Therefore, you can use this as a label for the unlabeled dataset. You can also formulate the problem with regularization by adding the term "a good fitting does not deviate from the initial value so much", but in this case you can also obtain functions that give pseudo-labels for unlabeled datasets by using matrix operations.
+
+
+
+
+
+
+
 ## 【2020/05/14】**Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results**【NeurIPS2017】
 
 [**[Tarvainen and Valpola, *NeurIPS*, 2017]**](#tarvainen2017mean)
@@ -100,7 +118,7 @@ This version is 0.2.
 
 Temporal Ensembling と呼ばれる半教師あり学習の方法をさらに改善した Mean Teacher という手法を提案. これは訓練中の連続したモデルの重みを平均することで「教師モデル」を作り出すことに由来している. 特に今回はモデルの「指数移動平均 (EMA)」を用いて教師モデルを構成する. そして, この教師モデルを用いてノイズを加えた pseudo-labeling を半教師あり集合に対して行うことで学習をする. 他の半教師あり学習の手法と数値実験的に比べており, ラベルの数・training loss などの観点から手法の評価を行っている. ハイパラとして EMA の重みは重要であることを指摘している.
 
-They propose a method called Mean Teacher, which is a further improvement on the semi-supervised learning method called Temporal Ensembling. This method is derived from the fact that a "teacher model" is created by averaging the weights of a continuous model during training. In this paper, the exponential moving average (EMA) of the model is used to construct the teacher model. Then, they use the model to do pseudo-labeling on the semi-supervised set added noises. The method is compared with other semi-supervised learning methods experimentally and evaluated in terms of number of labels and training loss. They point out that the weight of the EMA is important as a high parameter.
+They propose a method called Mean Teacher, which is a further improvement on the semi-supervised learning method called Temporal Ensembling. This method is derived from the fact that a "teacher model" is created by averaging the weights of a continuous model during training. In this paper, the exponential moving average (EMA) of the model is used to construct the teacher model. Then, they use the model to do pseudo-labeling on the semi-supervised set added noises. The method is compared with other semi-supervised learning methods experimentally and evaluated in terms of number of labels and training loss. They point out that the weight of the EMA is important as a hyper parameter.
 
 ![2020_05_15_tarvainen](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_15_tarvainen.png)
 
