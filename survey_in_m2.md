@@ -90,6 +90,20 @@ This version is 0.2.
 
 
 
+##【2020/05/17】**Semi-supervised Learning via Gaussian Processes**【NeurIPS2005】
+
+[**[Lawrence and Jordan, *NeurIPS*, 2005]**](#lawrence2005semi)
+
+keyword : Semi-supervised Learning, Gaussian Process
+
+
+
+ガウス過程判別モデルに対する半教師あり学習の手法の提案. 特徴的な点としては, 二値判別問題を "ordered categorical model" という方法で捉え, (つまり, -1か1かというよりは, -1に近い方が-1らしいと考える) ラベルのないデータについては0として考える. この null region が半教師あり学習のミソとなる. 学習としては事後分布を求めることになり, 推論としては予測分布を求めることになる, という点は通常のベイズ推論と変わらない.
+
+A semi-supervised learning method for the Gaussian process discriminant model is proposed, which is characterized by the "ordered categorical model" approach to the binary discriminant problem (i.e., it is not -1 or -1, but close to -1).  and unlabeled data are considered as 0. This null region is the key point of this semi-supervised learning. It is same to standard Bayesian inference in that you obtain the posterior distribution for learning and the predictive distribution for inference.
+
+
+
 ##【2020/05/15】**Learning with Local and Global Consistency**【NeurIPS2004】
 
 [**[Zhou et al., *NeurIPS*, 2004]**](#zhou2004learning)
@@ -1166,3 +1180,4 @@ Section 6 Model Extraction given class labels only
 
 <a name="tarvainen2017mean"> </a>[52] Antti Tarvainen and Harri Valpola. Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results. In *Advances in Neural Information Processing Systems,* pages 1195– 1204, 2017.
 
+[53] Neil D Lawrence and Michael I Jordan. Semi-supervised Learning via Gaussian Processes. In *Advances in Neural Information Processing Systems*, pages 753–760, 2005.
