@@ -90,11 +90,29 @@ This version is 0.2.
 
 
 
+##【2020/05/18】**Bayesian Batch Active Learning as Sparse Subset Approximation**【NeurIPS2019】
+
+[**[Pinsler et al., *NeurIPS*, 2019]**](#pinsler2019bayesian)
+
+**keywords : Active Learning, Bayesian Inference, Bayesian coresets, Frank-Wolfe Algorithm**
+
+
+
+ベイズモデルとしてバッチ型の能動学習を見たとき, Uncertainty を最も減らすようにプールからデータを選ぶのが良いが, これは NP-hard な部分集合を選ぶ問題となってしまう. その解を見つける方法として, これまでの代表的な能動学習のアルゴリズムでは貪欲に解いて近似解を得ているのみであった. 本研究では sparse な部分集合で事後分布の $\log$ を近似することを考える. これは Bayesian coresets というアイディアから来ており, 実際の解くべき問題の線形緩和問題となっている. $x_m$ と $x_n$ の内積を用いた表現で目的関数が書かれるが, これをさらにカーネル法の考え方を適用し, ヒルベルト空間上で Frank-Wolfe Algorithm を用いて解く. 重み付き内積や Random Feature を用いたカーネルの近似にも言及. 提案手法の優位性は数値実験によって確かめており, MAXENT よりも test RMSE が改善されていることを述べている.
+
+When you look at batch active learning as a Bayesian model, it is better to select data from the pool in such a way as to reduce Uncertainty the most, but this leads to the problem of selecting NP-hard subsets. In order to find the solution to this problem, typical active learning algorithms so far have only greedily solved the problem and obtained an approximate solution. In this work, they try to approximate the $\log$ posterior distribution  with a sparse subset. This comes from the idea of Bayesian coresets, which is a linear relaxation problem of the actual problem to be solved. The objective function is written as a representation of the inner product of $x_m$ and $x_n$, which is further applied to the kernel method and solved in Hilbert space using the Frank-Wolfe Algorithm. The weighted inner product and the approximation of the kernel using Random Feature are also mentioned. The superiority of the proposed method is confirmed by numerical experiments, and it is stated that test RMSE is improved over MAXENT.
+
+<img src="/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_19_pinsler.png" alt="2020_05_19_pinsler" style="zoom:50%;" />
+
+
+
+
+
 ##【2020/05/17】**Semi-supervised Learning via Gaussian Processes**【NeurIPS2005】
 
 [**[Lawrence and Jordan, *NeurIPS*, 2005]**](#lawrence2005semi)
 
-keyword : Semi-supervised Learning, Gaussian Process
+**keywords : Semi-supervised Learning, Gaussian Process, Null Category**
 
 
 
@@ -1181,3 +1199,5 @@ Section 6 Model Extraction given class labels only
 <a name="tarvainen2017mean"> </a>[52] Antti Tarvainen and Harri Valpola. Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results. In *Advances in Neural Information Processing Systems,* pages 1195– 1204, 2017.
 
 [53] Neil D Lawrence and Michael I Jordan. Semi-supervised Learning via Gaussian Processes. In *Advances in Neural Information Processing Systems*, pages 753–760, 2005.
+
+<a name="pinsler2019bayesian"> </a>[54] Robert Pinsler, Jonathan Gordon, Eric Nalisnick, and José Miguel Hernández-Lobato. Bayesian batch active learning as sparse subset approximation. In *Advances in Neural Information Processing Systems*, pages 6356–6367, 2019.
