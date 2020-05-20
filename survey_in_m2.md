@@ -90,6 +90,20 @@ This version is 0.2.
 
 
 
+##【2020/05/19】**Nyström Method vs Random Fourier Features: A Theoretical and Empirical Comparison**【NeurIPS2012】
+
+[**[Yang et al., *NeurIPS*, 2012]**](#yang2012nystrom)
+
+**keywords : Kernel model, Random Feature, Nyström Method, fast rate**
+
+
+
+カーネルモデルにおいてグラム行列の近似を考えたとき代表的な方法として Nyström の方法や Random Feature を用いた方法が考えられる. 本研究ではL2正則化項つき経験誤差最小解の性質について論じており, Nyström の方法において, 固有値の減衰レートが十分速い時に, (モデル内での) 真の関数との誤差レートが (ある意味で) 1/m になることを述べている.
+
+Nyström's method and Random Feature can be considered as representative methods for approximating gram matrices in kernel models. In this work, they discuss the nature of the empirical error minimum solution with L2 regularization terms, and state that in the Nyström method, the error rate with the true function (in the model) is (in a sense) 1/m if the decay rate of eigenvalues is fast enough.
+
+
+
 ##【2020/05/18】**Bayesian Batch Active Learning as Sparse Subset Approximation**【NeurIPS2019】
 
 [**[Pinsler et al., *NeurIPS*, 2019]**](#pinsler2019bayesian)
@@ -1201,3 +1215,5 @@ Section 6 Model Extraction given class labels only
 [53] Neil D Lawrence and Michael I Jordan. Semi-supervised Learning via Gaussian Processes. In *Advances in Neural Information Processing Systems*, pages 753–760, 2005.
 
 <a name="pinsler2019bayesian"> </a>[54] Robert Pinsler, Jonathan Gordon, Eric Nalisnick, and José Miguel Hernández-Lobato. Bayesian batch active learning as sparse subset approximation. In *Advances in Neural Information Processing Systems*, pages 6356–6367, 2019.
+
+<a name="yang2012nystrom"> </a>[55] Tianbao Yang, Yu-Feng Li, Mehrdad Mahdavi, Rong Jin, and Zhi-Hua Zhou. Nystr¨om method vs random fourier features: A theoretical and empirical comparison. In *Advances in Neural Information Processing Systems*, pages 476–484, 2012.
