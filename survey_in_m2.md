@@ -90,6 +90,20 @@ This version is 0.2.
 
 
 
+##【2020/05/20】**Data Poisoning Attacks against Autoregressive Models**【AAAI2016】
+
+[**[Alfeld et al., *AAAI*, 2016]**](#alfeld2016data)
+
+**keywords : Poisoning, AR model, Quadratic Programming, Attractive attack**
+
+
+
+自己回帰モデルに対する Poisoning の定式化とその解き方を提案した論文. ここではできるだけ, あるインスタンス $t$ に寄せるような攻撃方法, つまり attractive attck というものを考え, これを定式化している. ノイズの大きさを正則化項として目的関数を定義する. この時, 加法的なノイズ $\delta$ が変数となるが $\delta$ についての二次計画問題となる. この時, $\delta$ に関するコスト関数やノルムの定義によって, 制約がついたり, 付加項が足されたりといった定式化に変わるが, いずれにせよ二次計画となる. 数値実験では Random よりも良いということを述べている.
+
+This paper presents a formulation of poisoning for autoregressive models and a proposed solution. In this paper, they use an attack method, called "attractive attck", which is designed to be attracted to a certain instance $t$ as much as possible. In this case, the configuration of the additive noise $\delta$ is a quadratic programming w.r.t. $\delta$. Depending on the definition of the cost function and the norm for $\delta$, the formulation may change to a constraint or to an additive term, but in any case, it remains a quadratic programming problem, in any case. They also mention that the numerical experiments are better than Random.
+
+
+
 ##【2020/05/19】**Nyström Method vs Random Fourier Features: A Theoretical and Empirical Comparison**【NeurIPS2012】
 
 [**[Yang et al., *NeurIPS*, 2012]**](#yang2012nystrom)
@@ -1217,3 +1231,5 @@ Section 6 Model Extraction given class labels only
 <a name="pinsler2019bayesian"> </a>[54] Robert Pinsler, Jonathan Gordon, Eric Nalisnick, and José Miguel Hernández-Lobato. Bayesian batch active learning as sparse subset approximation. In *Advances in Neural Information Processing Systems*, pages 6356–6367, 2019.
 
 <a name="yang2012nystrom"> </a>[55] Tianbao Yang, Yu-Feng Li, Mehrdad Mahdavi, Rong Jin, and Zhi-Hua Zhou. Nystr¨om method vs random fourier features: A theoretical and empirical comparison. In *Advances in Neural Information Processing Systems*, pages 476–484, 2012.
+
+<a name="alfeld2016data"> </a>[56] Scott Alfeld, Xiaojin Zhu, and Paul Barford. Data poisoning attacks against autoregressive models. In *Thirtieth AAAI Conference on Artificial Intelligence*, 2016.
