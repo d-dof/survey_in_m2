@@ -10,7 +10,7 @@ Created by Yuto Mori / 森 雄人 (D_dof)<img src="/Users/moriyuto/Documents/stu
 
 ## Version
 
-This version is 0.2.
+This version is 0.3.
 
 
 
@@ -87,6 +87,22 @@ This version is 0.2.
 
 
 # Survey Diary
+
+
+
+##【2020/05/25】**Using Machine Teaching to Identify Optimal Training-Set Attacks on Machine Learners**【AAAI2015】
+
+[**[Mei and Zhu, *AAAI*, 2015]**](#mei2015using)
+
+**keywords: Poisoning, Teaching, KKT, SVM, Logistic Regression, Linear Regression, Bilevel optimization**
+
+
+
+Poisoning の方法として bilevel optimization として問題を定式化. 制約条件に入るのは通常の意味で学習を行った時の, 最適なパラメータを得るという条件になる. この条件を満たすパラメータを毎回求めるのは計算量的に困難であるため, これをKKT条件で置き換えた問題を考える. すると, KKT条件を満たしながら最適化する問題となり, 通常の制約つき最適化問題となる. 攻撃者側の目的関数としてはできるだけ「真のパラメータに近く」, できるだけ「元のデータセットから動かない」ようなものを考えたい, というモチベーションからこれらのノルムの和を足し上げたものを用いる. 提案手法の良さは数値実験的に検証している.
+
+They formulate the problem as bilevel optimization as a method of poisoning. The constraint condition is that you obtain the optimal parameters when you train the problem in the normal sense. Since it is computationally difficult to obtain parameters that satisfy this condition every time, you can consider a problem in which you replace it with the KKT condition. Then, the problem is optimized while satisfying the KKT condition, and the problem becomes an ordinary constrained optimization problem. The attacker's motivation is to keep the target function as close to the true parameter as possible, and to keep it from moving from the original dataset as much as possible, so they use the sum of these norms. The merits of the proposed method are verified by numerical experiments.
+
+
 
 
 
@@ -1233,3 +1249,6 @@ Section 6 Model Extraction given class labels only
 <a name="yang2012nystrom"> </a>[55] Tianbao Yang, Yu-Feng Li, Mehrdad Mahdavi, Rong Jin, and Zhi-Hua Zhou. Nystr¨om method vs random fourier features: A theoretical and empirical comparison. In *Advances in Neural Information Processing Systems*, pages 476–484, 2012.
 
 <a name="alfeld2016data"> </a>[56] Scott Alfeld, Xiaojin Zhu, and Paul Barford. Data poisoning attacks against autoregressive models. In *Thirtieth AAAI Conference on Artificial Intelligence*, 2016.
+
+<a name="mei2015using"> </a>[57] Shike Mei and Xiaojin Zhu. Using machine teaching to identify optimal training-set attacks on machine learners. In *Twenty-Ninth AAAI Conference on Artificial Intelligence*, 2015.
+
