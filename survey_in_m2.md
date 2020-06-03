@@ -90,6 +90,20 @@ This version is 0.3.
 
 
 
+## 【2020/06/03】**Coresets for Scalable Bayesian Logistic Regression**【NeurIPS2016】
+
+[**[Huggins et al., *NeurIPS*, 2016]**](#huggins2016coresets)
+
+**keywords: Bayesian Inference, Coreset, Logistic Regression**
+
+
+
+ベイズ推論において一般に事後分布の計算というのは計算量的に重い問題であり, 変分ベイズ推論やMCMCを用いて計算することが一般的だった. 本研究では「データセットの中には冗長なデータが多い」という視点から "Coreset" というデータの部分集合の概念を提案. 全体の尤度と,  Coreset だけを用いた尤度を比べたときにほとんど変わらなくなるように Coreset を選択する. ただし, この Coreset の導出に必要な sensitivity の正確な計算は困難であるため, 計算しやすい指標で代用する. 実際, Logistic Regerssion の際に sensitivity の上界・下界を導出している. この代用の際には「クラスタリング中心点で代用」という考えが基本にある. 数値実験的にも良さを検証しており, いくつかのデータセットでは random よりも少ない点数で近似ができていることを示している.
+
+In Bayesian inference, computation of posterior distributions is generally a computationally heavy problem, and it has been common to use variational Bayesian inference or MCMC. In this study, they propose the concept of a subset of data called "Coreset" from the viewpoint that there are many redundant data in a dataset. The Coreset is chosen so that the likelihood of the whole data set is almost the same as the likelihood of the Coreset alone. However, since it is difficult to accurately calculate the sensitivity required to derive the Coreset, they substitute an index that is easy to calculate. In fact, they derive the upper and lower bounds of the sensitivity in the Logistic Regerssion. The basic idea of this substitution is to use the clustering center point as a substitute. Numerical experiments have shown that some data sets can be approximated with fewer points than random.
+
+
+
 ##【2020/05/25】**Using Machine Teaching to Identify Optimal Training-Set Attacks on Machine Learners**【AAAI2015】
 
 [**[Mei and Zhu, *AAAI*, 2015]**](#mei2015using)
@@ -1251,4 +1265,6 @@ Section 6 Model Extraction given class labels only
 <a name="alfeld2016data"> </a>[56] Scott Alfeld, Xiaojin Zhu, and Paul Barford. Data poisoning attacks against autoregressive models. In *Thirtieth AAAI Conference on Artificial Intelligence*, 2016.
 
 <a name="mei2015using"> </a>[57] Shike Mei and Xiaojin Zhu. Using machine teaching to identify optimal training-set attacks on machine learners. In *Twenty-Ninth AAAI Conference on Artificial Intelligence*, 2015.
+
+<a name="huggins2016coresets"> </a>[58] Jonathan Huggins, Trevor Campbell, and Tamara Broderick. Coresets for scalable bayesian logistic regression. In *Advances in Neural Information Processing Systems*, pages 4080–4088, 2016.
 
