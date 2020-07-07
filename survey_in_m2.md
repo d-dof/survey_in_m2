@@ -1285,3 +1285,5 @@ Section 6 Model Extraction given class labels only
 
 <a name="huggins2016coresets"> </a>[58] Jonathan Huggins, Trevor Campbell, and Tamara Broderick. Coresets for scalable bayesian logistic regression. In *Advances in Neural Information Processing Systems*, pages 4080–4088, 2016.
 
+<a name="cortes2019regularized"> </a>[59] Corinna Cortes, Mehryar Mohri, and Dmitry Storcheus. Regularized gradient boosting. In *Advances in Neural Information Processing Systems*, pages 5449–5458, 2019.
+
