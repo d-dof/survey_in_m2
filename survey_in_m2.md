@@ -1,6 +1,6 @@
 # Survey in M2
 
-Created by Yuto Mori / 森 雄人 (D_dof)<img src="/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/icon.jpg" width="70px" />
+Created by Yuto Mori / 森 雄人 (D_dof)<img src="./survey_imgs/icon.jpg" width="70px" />
 
 
 
@@ -90,6 +90,24 @@ This version is 0.3.
 
 
 
+## 【2020/07/07】**Regularized Gradient Boosting**【NeurIPS2019】
+
+[**[Cortes et al., *NeurIPS*, 2019]**](#cortes2019reguarized)
+
+**keywords: Boosting, Regularization, Regression Tree, Coordinate Descent**
+
+
+
+Gradient Boosting は特に決定木を弱学習器とするアンサンブルモデルでよく用いられるが, 正則化つきの学習問題において理論的な側面, 学習保証についてはよく知られていなかった. 本研究では Boosting を弱学習器が属する関数空間上の最適化問題を座標降下法で解く方法として捉えることで理論解析を行う. 途中, 関数空間上での損失関数を変えることで AdaBoost, LogitBoost, Gradient Boosting を柔軟に表現できるフレームワークになっていることを示しており, 大変見通しが良い. 理論的なバウンドとしては標本 Rademacher Complexity に基づくものを用いている. 面白い点としては実際にこのバウンドを用いて正則化つき Gradiendt Boosting のアルゴリズムの提案までしている点. 理論保証と (簡単な) 数値実験の面からその性能の良さについて述べている.
+
+Gradient Boosting is particularly common in ensemble models where the decision tree is a weak learner, but the theoretical aspects of learning problems with regularization and learning guarantees are not well known. In this study, Boosting is seen as a coordinate descent method for solving the optimization problem on the function space of weak learners. They perform theoretical analysis. On the way, by changing the loss function on the function space, it can be a flexible framework for expressing AdaBoost, LogitBoost, and Gradient Boosting. The theoretical bound is based on the sample Rademacher Complexity, and The interesting thing is that they can actually use this bound for regularized Gradient Boosting. 
+
+
+
+
+
+
+
 ## 【2020/06/03】**Coresets for Scalable Bayesian Logistic Regression**【NeurIPS2016】
 
 [**[Huggins et al., *NeurIPS*, 2016]**](#huggins2016coresets)
@@ -104,7 +122,7 @@ In Bayesian inference, computation of posterior distributions is generally a com
 
 
 
-##【2020/05/25】**Using Machine Teaching to Identify Optimal Training-Set Attacks on Machine Learners**【AAAI2015】
+## 【2020/05/25】**Using Machine Teaching to Identify Optimal Training-Set Attacks on Machine Learners**【AAAI2015】
 
 [**[Mei and Zhu, *AAAI*, 2015]**](#mei2015using)
 
@@ -120,7 +138,7 @@ They formulate the problem as bilevel optimization as a method of poisoning. The
 
 
 
-##【2020/05/20】**Data Poisoning Attacks against Autoregressive Models**【AAAI2016】
+## 【2020/05/20】**Data Poisoning Attacks against Autoregressive Models**【AAAI2016】
 
 [**[Alfeld et al., *AAAI*, 2016]**](#alfeld2016data)
 
@@ -134,7 +152,7 @@ This paper presents a formulation of poisoning for autoregressive models and a p
 
 
 
-##【2020/05/19】**Nyström Method vs Random Fourier Features: A Theoretical and Empirical Comparison**【NeurIPS2012】
+## 【2020/05/19】**Nyström Method vs Random Fourier Features: A Theoretical and Empirical Comparison**【NeurIPS2012】
 
 [**[Yang et al., *NeurIPS*, 2012]**](#yang2012nystrom)
 
@@ -148,7 +166,7 @@ Nyström's method and Random Feature can be considered as representative methods
 
 
 
-##【2020/05/18】**Bayesian Batch Active Learning as Sparse Subset Approximation**【NeurIPS2019】
+## 【2020/05/18】**Bayesian Batch Active Learning as Sparse Subset Approximation**【NeurIPS2019】
 
 [**[Pinsler et al., *NeurIPS*, 2019]**](#pinsler2019bayesian)
 
@@ -160,13 +178,13 @@ Nyström's method and Random Feature can be considered as representative methods
 
 When you look at batch active learning as a Bayesian model, it is better to select data from the pool in such a way as to reduce Uncertainty the most, but this leads to the problem of selecting NP-hard subsets. In order to find the solution to this problem, typical active learning algorithms so far have only greedily solved the problem and obtained an approximate solution. In this work, they try to approximate the $\log$ posterior distribution  with a sparse subset. This comes from the idea of Bayesian coresets, which is a linear relaxation problem of the actual problem to be solved. The objective function is written as a representation of the inner product of $x_m$ and $x_n$, which is further applied to the kernel method and solved in Hilbert space using the Frank-Wolfe Algorithm. The weighted inner product and the approximation of the kernel using Random Feature are also mentioned. The superiority of the proposed method is confirmed by numerical experiments, and it is stated that test RMSE is improved over MAXENT.
 
-<img src="/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_19_pinsler.png" alt="2020_05_19_pinsler" style="zoom:50%;" />
+<img src="./survey_imgs/2020_05_19_pinsler.png" alt="2020_05_19_pinsler" style="zoom:50%;" />
 
 
 
 
 
-##【2020/05/17】**Semi-supervised Learning via Gaussian Processes**【NeurIPS2005】
+## 【2020/05/17】**Semi-supervised Learning via Gaussian Processes**【NeurIPS2005】
 
 [**[Lawrence and Jordan, *NeurIPS*, 2005]**](#lawrence2005semi)
 
@@ -180,7 +198,7 @@ A semi-supervised learning method for the Gaussian process discriminant model is
 
 
 
-##【2020/05/15】**Learning with Local and Global Consistency**【NeurIPS2004】
+## 【2020/05/15】**Learning with Local and Global Consistency**【NeurIPS2004】
 
 [**[Zhou et al., *NeurIPS*, 2004]**](#zhou2004learning)
 
@@ -191,8 +209,6 @@ A semi-supervised learning method for the Gaussian process discriminant model is
 近くにあるデータは似たようなラベルを持つという Consistency を用いて半教師あり学習を行う. 半教師に仮想的なラベルを与える F の構成として, はじめは局所的なラベルの Consistency だけを目的関数に反映させるが, 最終的には大域的な Consistency までを考慮したアルゴリズムとして定式化する. しかし, 実はこれはステップ数無限大の極限では $(I - \alpha S)^{-1} Y$ という演算で得られる. したがってこれをラベルなしデータセットに対するラベルとしてあげればよい. また 「良いフィッティングはそんなに初期値からずれない」という項を足し上げて正則化つきの問題としても定式化できるが, この場合も同様に行列演算でラベルなしデータセットに対する疑似ラベルを与える関数を得ることができる.
 
 They propose semi-supervised learning using the consistency that nearby data have similar labels. As a construct of F, which gives hypothetical labels to the semi-supervisors, it initially reflect only the local consistency of the labels in the target function, but eventually formulate an algorithm that takes into account the global consistency. However, in fact, this can be obtained in the limit of infinite number of steps by the operation $(I -\alpha S)^{-1} Y$. Therefore, you can use this as a label for the unlabeled dataset. You can also formulate the problem with regularization by adding the term "a good fitting does not deviate from the initial value so much", but in this case you can also obtain functions that give pseudo-labels for unlabeled datasets by using matrix operations.
-
-
 
 
 
@@ -210,7 +226,7 @@ Temporal Ensembling と呼ばれる半教師あり学習の方法をさらに改
 
 They propose a method called Mean Teacher, which is a further improvement on the semi-supervised learning method called Temporal Ensembling. This method is derived from the fact that a "teacher model" is created by averaging the weights of a continuous model during training. In this paper, the exponential moving average (EMA) of the model is used to construct the teacher model. Then, they use the model to do pseudo-labeling on the semi-supervised set added noises. The method is compared with other semi-supervised learning methods experimentally and evaluated in terms of number of labels and training loss. They point out that the weight of the EMA is important as a hyper parameter.
 
-![2020_05_15_tarvainen](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_15_tarvainen.png)
+![2020_05_15_tarvainen](./survey_imgs/2020_05_15_tarvainen.png)
 
 
 
@@ -268,7 +284,7 @@ This paper formulates Poisoing for graph-based semi-supervised learning, which h
 
 
 
-##【2020/05/10】**Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks**【NeurIPS2018】
+## 【2020/05/10】**Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks**【NeurIPS2018】
 
 [**[Shafahi et al., *NeurIPS*, 2018]**](#shafahi2018poison)
 
@@ -305,7 +321,7 @@ Poisoning is a method to intentionally blend data that increases the loss by cha
 
 
 
-##【2020/05/08】**Semi-supervised Learning with Deep Generative Models**【NeurIPS2014】
+## 【2020/05/08】**Semi-supervised Learning with Deep Generative Models**【NeurIPS2014】
 
 [**[Kingma et al., *NeurIPS*, 2014]**](#kingma2014semi)
 
@@ -319,11 +335,11 @@ As the objective variable of semi-supervised learning, they add the sum of the l
 
 
 
-![2020_05_08_kingma](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_08_kingma.png)
+![2020_05_08_kingma](./survey_imgs/2020_05_08_kingma.png)
 
 
 
-##【2020/05/07】**Learning from Labeled and Unlabeled Data with Label Propagation**【2002】
+## 【2020/05/07】**Learning from Labeled and Unlabeled Data with Label Propagation**【2002】
 
 [**[Zhu and Ghahramani, 2002]**](#zhu2002learning)
 
@@ -335,11 +351,12 @@ As the objective variable of semi-supervised learning, they add the sum of the l
 
 They establish a method called Label Propagation to label semi-supervised sets under the assumption that "close data points should have close labels". The method is of the type that constructs graphs between the data, and is initialized by the Gaussian kernel. Then, the weighting matrix is applied to the weight vectors about the nodes to obtain the following states as in a Markov chain. Then, for the labeled nodes, the algorithm is reweighted to 0 or 1 again, and the algorithm is repeated. In this way, the labels are extended to the semi-supervised set.
 
-![2020_05_07_zhu](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_07_zhu.png)
+![2020_05_07_zhu](./survey_imgs/2020_05_07_zhu.png)
 
 
 
-##【2020/05/06】**Virtual Adversarial Training: A Regularization Method for Supervised and Semi-Supervised Learning**【TPAMI2018】
+## 【2020/05/06】**Virtual Adversarial Training: A Regularization Method for Supervised and Semi-Supervised Learning**【TPAMI2018】
+
 [**[Miyato et al., *TPAMI*, 2018]**](#miyato2018vat)
 
 **keywords : Semi-supervised Learning, VAT, Adversarial Training**
@@ -373,7 +390,7 @@ They propose a semi-supervised Support Vector Machine (S$^3$VM). It is formulate
 
 
 
-##【2020/05/04】**Combining Labeled and Unlabeled Data with Co-Training**【COLT1998】
+## 【2020/05/04】**Combining Labeled and Unlabeled Data with Co-Training**【COLT1998】
 
 [**[Blum and Mitchell, *COLT*, 1998]**](#blum1998)
 
@@ -389,7 +406,7 @@ They propose a method to make a classification model from each feature and train
 
 
 
-##【2020/05/03】**Pseudo-Label : The Simple and Efficient Semi-Supervised Learning Method for Deep Neural Networks**【ICML2013Workshop】
+## 【2020/05/03】**Pseudo-Label : The Simple and Efficient Semi-Supervised Learning Method for Deep Neural Networks**【ICML2013Workshop】
 
 [**[Lee., *ICML Workshop*, 2013]**](#lee2013)
 
@@ -405,7 +422,7 @@ A pseudo-labeling method for semi-supervised learning is proposed. The features 
 
 
 
-##【2020/05/02】**Realistic Evaluation of Deep Semi-Supervised Learning Algorithms**【NeurIPS2018】
+## 【2020/05/02】**Realistic Evaluation of Deep Semi-Supervised Learning Algorithms**【NeurIPS2018】
 
 [**[Oliver et al., *NeurIPS*, 2018]**](#oliver2018)
 
@@ -421,7 +438,7 @@ Various methods of semi-supervised learning have been proposed, and they have co
 
 
 
-##【2020/05/01】**Semi-Supervised Learning Using Gaussian Fields and Harmonic Functions**【ICML2003】
+## 【2020/05/01】**Semi-Supervised Learning Using Gaussian Fields and Harmonic Functions**【ICML2003】
 
 [**[Zhu et al., *ICML*, 2003]**](#zhu2003)
 
@@ -437,7 +454,7 @@ The energy function is defined by constructing a graph (in some way) between the
 
 
 
-![2020_05_01_zhu](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_05_01_zhu.png)
+![2020_05_01_zhu](./survey_imgs/2020_05_01_zhu.png)
 
 
 
@@ -499,7 +516,7 @@ In a regression problem from $\{0, 1\}^n$ to a real number, we consider training
 
 
 
-##【2020/04/27】**Improving the Gaussian Process Sparse Spectrum Approximation by Representing Uncertainty in Frequency Inputs**【ICML2015】
+## 【2020/04/27】**Improving the Gaussian Process Sparse Spectrum Approximation by Representing Uncertainty in Frequency Inputs**【ICML2015】
 
 [**[Gal and Turner, *ICML*, 2015]**](#gal2015)
 
@@ -559,13 +576,13 @@ When solving a regression problem with a Gaussian process, they propose an algor
 
 A study on the design of kernels of deep Gaussian processes using random features. The target of the study is a regression problem. They have found that the use of random features not only speeds up the learning and inference of Gaussian processes, but also shows good experimental performance (small RMSE). The key point is that they use Random Feature + MCMC to compute the slope so that they can actually learn them, which contributes to the practical aspects of the simulation.
 
-![2020_04_24_cutajar](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_24_cutajar.png)
+![2020_04_24_cutajar](./survey_imgs/2020_04_24_cutajar.png)
 
 
 
 
 
-##【2020/04/23】**Neural Tangent Kernel: Convergence and Generalization in Neural Networks**【NeurIPS2018】
+## 【2020/04/23】**Neural Tangent Kernel: Convergence and Generalization in Neural Networks**【NeurIPS2018】
 
 [**[Jacot et al., *NeurIPS*, 2018]**](#jacot2018)
 
@@ -601,7 +618,7 @@ They suppose that an adversary copies a model when you deploy it. In this case, 
 
 
 
-![2020_04_22_lukas](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_22_lukas.png)
+![2020_04_22_lukas](./survey_imgs/2020_04_22_lukas.png)
 
 
 
@@ -649,7 +666,7 @@ The min-max rates of the upper and lower bounds of the difference between the em
 
 They consider a pool-based situation for learning in which there are learners and teachers. The learner then asks which of the points $x_1, \dots, x_K$ should be inputted as a multi-arm bandit problem. The learner's reward is $E[\sum_{t-1}^{T} y_t]$ ($y_t \in \{0, 1\}$ ), and the teacher should search for things that make $y_t$ 1 as much as possible. The teacher, on the other hand, tries to figure out how to return $y_t$ when $x_t$ comes in so that the learners can converge to the true parameter $\theta^*$ as fast as possible, and formulates this as the Markov Decision Process (MDP). The immediate reward in this case is $R_t (x_1, y_1,\dots, y_{t-1}, y_{t-1}, y_{t-1}, x_t ; \theta^*) = x_t^{\top} \theta^*$, and the teacher is the agent that maximizes the value function $E^\pi[\sum_{t=1}^T\gamma^{t-1} R_t]$. It is experimentally confirmed that the teacher's information can converge to the solution faster than other active learning methods such as uncertainty sampling.
 
-![2020_04_20_peltola](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_20_peltola.png)
+![2020_04_20_peltola](./survey_imgs/2020_04_20_peltola.png)
 
 
 
@@ -721,7 +738,7 @@ A paper that proposes a method to defend against Model Extraction. The idea is s
 
 
 
-![2020_04_15_lee](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_15_lee.png)
+![2020_04_15_lee](./survey_imgs/2020_04_15_lee.png)
 
 
 
@@ -755,7 +772,7 @@ The Bayesian Quadrature is a method to approximate the quantity represented by a
 
 
 
-![2020_04_13_kanagawa](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_13_kanagawa.png)
+![2020_04_13_kanagawa](./survey_imgs/2020_04_13_kanagawa.png)
 
 
 
@@ -785,7 +802,7 @@ Model Extractionの問題を考える際, 事前情報として「ラベルの�
 
 In considering the problem of Model Extraction, they propose an efficient attack algorithm for the case where a large number of "unlabeled data sets" are at hand as prior information. they use algorithms from active learning frameworks such as the K-center strategy and the DeepFool-based Active Learning (DFAL) algorithm, which were proposed around 2018. The paper states that the algorithm is better than uniformly randomized queries experimentally, but it seems to be only a faint update.
 
-![2020_04_10_pal](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_10_pal.png)
+![2020_04_10_pal](./survey_imgs/2020_04_10_pal.png)
 
 
 
@@ -803,7 +820,7 @@ For the linear SVM, they propose a learning method that is strong in model extra
 
 
 
-![2020_04_09_alabdulmohsin](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_09_alabdulmohsin.png)
+![2020_04_09_alabdulmohsin](./survey_imgs/2020_04_09_alabdulmohsin.png)
 
 
 
@@ -819,13 +836,13 @@ For the linear SVM, they propose a learning method that is strong in model extra
 
 They propose a method to extract information about the activation function, number of layers, number of neurons, etc. of the internal model by directly touching the GPU and CPU as hardware from the outside and reading the electromagnetic frequencies (with the architectural information known). they use typical Reverse-Engineering techniques such as SPA and DPA (originally used for skimming of RSA cryptography). they also propose that they can recover the input data by skimming the data when the model is known and the input data is unknown, using HPA. This is a very interesting attack because it have never seen before in the theorists' minds.
 
-![2020_04_08_batina1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_08_batina1.png)
+![2020_04_08_batina1](./survey_imgs/2020_04_08_batina1.png)
 
 
 
 
 
-![2020_04_08_batina2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_08_batina2.png)
+![2020_04_08_batina2](./survey_imgs/2020_04_08_batina2.png)
 
 
 
@@ -845,11 +862,11 @@ A study that discusses how to defend against adversaries who come to Model Extra
 
 
 
-![2020_04_07_orekondy1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_07_orekondy1.png)
+![2020_04_07_orekondy1](./survey_imgs/2020_04_07_orekondy1.png)
 
 
 
-![2020_04_07_orekondy2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_07_orekondy2.png)
+![2020_04_07_orekondy2](./survey_imgs/2020_04_07_orekondy2.png)
 
 
 
@@ -867,7 +884,7 @@ they propose an algorithm to discriminate whether the adversary is trying to do 
 
 
 
-![2020_04_06_juuti](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_06_juuti.png)
+![2020_04_06_juuti](./survey_imgs/2020_04_06_juuti.png)
 
 
 
@@ -919,7 +936,7 @@ They propose to measure which data among the training data contribute to the min
 
 
 
-![2020_04_02_koh](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_02_koh.png)
+![2020_04_02_koh](./survey_imgs/2020_04_02_koh.png)
 
 
 
@@ -935,7 +952,7 @@ BERTに基づいた自然言語処理モデルが攻撃対象. 「BERTが使わ�
 
 Natural language processing model based on BERT is attacked. Model Extraction is based on the knowledge that "BERT is used". Since most of the previous Model Extraction algorithms theyre based on input on a continuous domain, they could not be used for NLP tasks as they are. In this study, they experimented numerically to find out what kind of queries can be thrown to efficiently perform Model Extraction in the case of natural language processing. As a result, they pointed out that it is enough to extract a random query from a wikipedia text set, etc., to perform model extraction efficiently.
 
-![2020_04_01_krishna](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_04_01_krishna.png)
+![2020_04_01_krishna](./survey_imgs/2020_04_01_krishna.png)
 
 
 
@@ -951,9 +968,9 @@ Natural language processing model based on BERT is attacked. Model Extraction is
 
 A method for extracting "meaningful" information in situations where a black box model is deployed. Metamodel-like approach. they aim to read architecture (e.g., which activation, max-pooling), optimization methods (e.g., SGD or ADAM), and training data (e.g., MNIST) as targets. The optimization method can also be understood by filling NN with inputs and outputs seen from the outside, right? This idea is too interesting. In fact, when they visualize it with t-SNE, it can be seen that each algorithm and architecture forms a cluster. I am astonished.
 
-![2020_03_31_oh1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_31_oh1.png)
+![2020_03_31_oh1](./survey_imgs/2020_03_31_oh1.png)
 
-![2020_03_31_oh2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_31_oh2.png)
+![2020_03_31_oh2](./survey_imgs/2020_03_31_oh2.png)
 
 ## 【2020/03/30】**Adversarial Learning**【KDD2005】
 
@@ -969,7 +986,7 @@ The oldest paper of Model Extraction. [Lowd and Meek, *KDD*, 2005] is famous in 
 
 
 
-![2020_03_30_lowd](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_30_lowd.png)
+![2020_03_30_lowd](./survey_imgs/2020_03_30_lowd.png)
 
 
 
@@ -985,9 +1002,9 @@ The oldest paper of Model Extraction. [Lowd and Meek, *KDD*, 2005] is famous in 
 
 Knockoff model that copies true black-box model is proposed. In [Tramer et al., 2016] setting, target model is unrealistic or simple (like Decision Tree, Linear Classifier), so they do experiments for more complex model like ResNet. This research has no theoretical analysis. The algorithm uses uniformly random method or reinforcement learning + active learning. Furthermore, they proposed that closed-world setting experiment (known training sets) and open-world setting experiment (unknown training sets)
 
-![2020_03_29_orekondy1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_29_orekondy1.png)
+![2020_03_29_orekondy1](./survey_imgs/2020_03_29_orekondy1.png)
 
-![2020_03_29_orekondy2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_29_orekondy2.png)
+![2020_03_29_orekondy2](./survey_imgs/2020_03_29_orekondy2.png)
 
 
 
@@ -1014,7 +1031,7 @@ Stealing Hyperparameters. In this research, Hyperparameter is coefficient of reg
 
 
 
-![2020_03_28_wang](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_28_wang.png)
+![2020_03_28_wang](./survey_imgs/2020_03_28_wang.png)
 
 
 
@@ -1032,7 +1049,7 @@ It is said that Kernel method requires the high computation complexity because o
 
 
 
-![2020_03_27_rahimi](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_27_rahimi.png)
+![2020_03_27_rahimi](./survey_imgs/2020_03_27_rahimi.png)
 
 
 
@@ -1048,13 +1065,13 @@ It is said that Kernel method requires the high computation complexity because o
 
 This paper introduce the algorithm to extract 2-layer ReLU Neural Network from exact recovery. It is different from the re-training (active learning) approach. This research is strongly related to **Model Reconstruction from Model Explanations** [Milli et al., FAT, 2019]. Main difference is the THRET MODEL. The former research’s setting is stronger because **getting gradient w.r.t. x is unrealistic**. But this time, Their approach **only use confidence score output.** 
 
-![2020_03_26_jagielski1](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_jagielski1.png)
+![2020_03_26_jagielski1](./survey_imgs/2020_03_26_jagielski1.png)
 
 
 
 
 
-![2020_03_26_jagielski2](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_26_jagielski2.png)
+![2020_03_26_jagielski2](./survey_imgs/2020_03_26_jagielski2.png)
 
 
 
@@ -1074,7 +1091,7 @@ This paper is a survey paper related to the security for ML. This is almost comp
 
 
 
-![2020_03_25_papernot](/Users/moriyuto/Documents/study/Master/survey_in_m2/survey_imgs/2020_03_25_papernot.png)
+![2020_03_25_papernot](./survey_imgs/2020_03_25_papernot.png)
 
 
 
