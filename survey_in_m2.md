@@ -90,9 +90,31 @@ This version is 0.3.
 
 
 
+## 【2020/07/08】**K-Beam Minimax: Efficient Optimization for Deep Adversarial Learning**【ICML2018】
+
+[**[Hamm and Noh, *ICML*, 2018]**](#hamm2018k-beam)
+
+**keywords: Min-Max Problem, K-Beam Search, $\varepsilon$-sub Gradient, non-concave**
+
+
+
+GAN の隆盛などに起因して min-max 問題が機械学習の文脈でも用いられるようになってきている. 標準的な解法としては交互勾配降下(上昇)が用いられるが, 内部の最大化問題の解に関する不連続性により, 最適化が失敗する例が挙げられる. そこで本研究では, 最大化問題の方に K-Beam Search 的な考え方を導入する. つまり適当な有限個の解の中で最大化問題を解き, それに対してもう一つの変数について最小化を $\varepsilon$ - 劣勾配を用いて行う. 特筆すべきはこのアルゴリズムに対する理論解析を行っている点. 最小化する方の変数については凸性, リプシッツ連続, 勾配もリプシッツ連続を仮定してはいるものの, 最大化する方の変数については非凹でも良い解析となっている点が特色である. このとき, $\mathrm{argmax}_{v \in \mathcal{V}} f(u, v)$ が有界かつ, 最大化のK-Beam において最大値が正確に取れていれば関数値としては最小となるイテレーションが存在することを保証できる.
+
+Due to the prominence of GANs and other factors, the min-max problem has also been used in the context of machine learning.  The standard solution method is the alternating gradient descent (ascending).  Although alternating gradient descent (ascent) is used as the standard solution method, they have found that there are several examples to fail due to discontinuities. In this study, they introduce a K-Beam Search-like approach to the optimization problem. In other words, they solve the maximization problem for a finite number of appropriate solutions, and then minimize another variable using the ε - sub gradient. It should be noted that they perform a theoretical analysis of the algorithm. They assume convexity and Lipschitz continuity for the minimizing variables, and Lipschitz continuity for the gradient as well. However, this analysis doesn't require that the maximizing variables are concave. In this case, there exists some iteration the the function value is smallest value  when argmax f(u, v) is bounded and maximizing K-Beam can be attained.
+
+
+$$
+\min_{u \in \mathcal{U}} \max_{v \in \mathcal{V}} f(u, v)
+$$
+
+
+
+
+
+
 ## 【2020/07/07】**Regularized Gradient Boosting**【NeurIPS2019】
 
-[**[Cortes et al., *NeurIPS*, 2019]**](#cortes2019reguarized)
+[**[Cortes et al., *NeurIPS*, 2019]**](#cortes2019regularized)
 
 **keywords: Boosting, Regularization, Regression Tree, Coordinate Descent**
 
@@ -1287,3 +1309,4 @@ Section 6 Model Extraction given class labels only
 
 <a name="cortes2019regularized"> </a>[59] Corinna Cortes, Mehryar Mohri, and Dmitry Storcheus. Regularized gradient boosting. In *Advances in Neural Information Processing Systems*, pages 5449–5458, 2019.
 
+<a name="hamm2018k-beam"> </a>[60] Jihun Hamm and Yung-Kyun Noh. K-beam minimax: Efficient optimization for deep adversarial learning. In *Proceedings of the 35th International Conference on Machine Learning*, pages 1876–1884, 2018.
