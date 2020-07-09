@@ -90,6 +90,22 @@ This version is 0.3.
 
 
 
+## 【2020/07/09】**Is Feature Selection Secure against Training Data Poisoning?**【ICML2015】
+
+[**[Xiao et al., *ICML*, 2015]**](#xiao2015feature)
+
+**keywords: Poisoning, LASSO, Regularization, KKT Condition**
+
+
+
+元の学習問題が正則化つきであるときの Poisoning について考察した論文. [Biggio et al., *ICML*, 2012]のように, poisoning したい点における勾配を元問題のKKT条件を用いて線形方程式を解くことで求める. 対象モデルは線形回帰に対してのみ求めているので, 実用性は薄い. 対象モデルが狭まってしまうのは Poisoning がそもそも部分問題として元の問題における学習を行う必要があることに起因する. また, アルゴリズムとしての提案はあるが, 得られる結果に対する理論保証はない. モデルをもう少し複雑にしたり, 簡単なモデルにおいても理論保証を与えるという方向性はあり得そうだ. 提案手法の良さは数値実験で検証しており, 特に poisoning samples が増えるにつれて, また正則化項が L1(LASSO) なのか L2(Ridge) なのか Elastic Net なのかという点について注目している.
+
+A paper that considers poisoning when the original learning problem has regularization. As [Biggio et al., *ICML*, 2012] is, a gradient on a poisoning point is obtained by solving the linear equations using the KKT condition of the original problem. Since the model of interest is only for linear regression, it is not very practical. The narrowing of the target model is due to the fact that Poisoning was originally a subproblem of the original problem. Although there are proposals for algorithms, there are no theoretical guarantees for the results obtained. It is possible to make the models a little more complex and to provide theoretical guarantees even for simple models. They have verified the merits of the proposed method by numerical experiments, and in particular, the increase in poisoning samples and which regularization term is used such as L1(LASSO) or L2(Ridge) or Elastic Net.
+
+
+
+
+
 ## 【2020/07/08】**K-Beam Minimax: Efficient Optimization for Deep Adversarial Learning**【ICML2018】
 
 [**[Hamm and Noh, *ICML*, 2018]**](#hamm2018k-beam)
@@ -1310,3 +1326,5 @@ Section 6 Model Extraction given class labels only
 <a name="cortes2019regularized"> </a>[59] Corinna Cortes, Mehryar Mohri, and Dmitry Storcheus. Regularized gradient boosting. In *Advances in Neural Information Processing Systems*, pages 5449–5458, 2019.
 
 <a name="hamm2018k-beam"> </a>[60] Jihun Hamm and Yung-Kyun Noh. K-beam minimax: Efficient optimization for deep adversarial learning. In *Proceedings of the 35th International Conference on Machine Learning*, pages 1876–1884, 2018.
+
+<a name="xiao2015feature"></a>[61] Huang Xiao, Battista Biggio, Gavin Brown, Giorgio Fumera, Claudia Eckert, and Fabio Roli. Is feature selection secure against training data poisoning? In *Proceedings of the 32th International Conference on Machine Learning*, pages 1689–1698, 2015.
