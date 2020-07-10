@@ -90,6 +90,20 @@ This version is 0.3.
 
 
 
+## 【2020/07/10】**The Curse of Concentration in Robust Learning: Evasion and Poisoning Attacks from Concentration of Measure** 【AAAI2019】
+
+[**[Mahloujifar et al., *AAAI*, 2019]**](#mahloujifar2019curse)
+
+**keywords: Concentration of Measure, Robustness, Adversarial Attack, Poisoning**
+
+
+
+データ分布に測度の集中があると, どんな判別器でもテストデータに対し, 定数確率で十分近い誤判別インスタンスが取れるということを主として示した論文. これはなぜロバストな判別器を作るのが難しいのか, という一般的な問いと, なぜ Adversarial Attack が可能かという問いに答えようという試みである. また, Poisoning に対しても同様に測度の集中という状況を考えることで, 訓練データが $m$ 個あるとき, $\sqrt{m}$ 個ぐらい書き換えることで $1-\delta$, $(\delta \ge 1/\mathrm{poly}(m))$ ぐらいの確率で間違えてしまうような仮説を作り出す Poisoning が可能ということを示している. 基本的には McDiarmid の不等式や, ハミング距離下での直積測度空間における不等式を用いている. 実験パートはなく, 理論的な研究のみで構成.
+
+When there is a concentration of measures in the data distribution, any discriminator can be close enough to the test data with a constant probability.  This is mainly said in this paper. This raises the general question of why it is so difficult to create robust discriminators, and why adversarial attacks are possible. For Poisoning, they also consider the situation of concentration of measurements in the same way, so that the training data is $m$, rewriting $\sqrt{m}$ will result in a making hypothesis with wrong probability that $1-\delta$ with $(\delta \ge 1/\mathrm{poly}(m))$. Basically, the inequalities are based on McDiarmid's inequality and the inequality in Cartesian metric space under the Hamming distance. There is no experimental part, and it consists only of theoretical studies.
+
+
+
 ## 【2020/07/09】**Is Feature Selection Secure against Training Data Poisoning?**【ICML2015】
 
 [**[Xiao et al., *ICML*, 2015]**](#xiao2015feature)
@@ -1327,4 +1341,6 @@ Section 6 Model Extraction given class labels only
 
 <a name="hamm2018k-beam"> </a>[60] Jihun Hamm and Yung-Kyun Noh. K-beam minimax: Efficient optimization for deep adversarial learning. In *Proceedings of the 35th International Conference on Machine Learning*, pages 1876–1884, 2018.
 
-<a name="xiao2015feature"></a>[61] Huang Xiao, Battista Biggio, Gavin Brown, Giorgio Fumera, Claudia Eckert, and Fabio Roli. Is feature selection secure against training data poisoning? In *Proceedings of the 32th International Conference on Machine Learning*, pages 1689–1698, 2015.
+<a name="xiao2015feature"> </a>[61] Huang Xiao, Battista Biggio, Gavin Brown, Giorgio Fumera, Claudia Eckert, and Fabio Roli. Is feature selection secure against training data poisoning? In *Proceedings of the 32th International Conference on Machine Learning*, pages 1689–1698, 2015.
+
+<a name="mahloujifar2019curse"> </a>[62] Saeed Mahloujifar, Dimitrios I Diochnos, and Mohammad Mahmoody. The curse of concentration in robust learning: Evasion and poisoning attacks from concentration of measure. In *Thirty-Third AAAI Conference on Artificial Intelligence*, pages 4536–4543, 2019.
