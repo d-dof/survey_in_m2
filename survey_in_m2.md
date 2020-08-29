@@ -10,7 +10,7 @@ Created by Yuto Mori / 森 雄人 (D_dof)<img src="./survey_imgs/icon.jpg" width
 
 ## Version
 
-This version is 0.3.
+This version is 0.4.
 
 
 
@@ -18,6 +18,7 @@ This version is 0.3.
 
 - これは森のサーベイをサーベイ時の時系列順にまとめたものです.
 - 日記代わりに大体1日に1つ論文をまとめるようにしています. 
+  - 間が空いている時もありますが...
 - (このサーベイは次の論文の出版に繋がっています. ご興味があれば是非一度読んでみて下さい.)
 
 
@@ -38,6 +39,7 @@ This version is 0.3.
 - Machine Teaching
 - Gaussian Process
 - Poisoning
+- Meta-Learning
 
 
 
@@ -87,6 +89,20 @@ This version is 0.3.
 
 
 # Survey Diary
+
+
+
+## 【2020/08/27】**Bilevel Programming for Hyperparameter Optimization and Meta-Learning**【ICML2018】
+
+[**[Franceschi et al., *ICML*, 2018]**](#franceschi2018bilevel)
+
+**keywords: Meta-Learning, Bilevel Programming, Hyperparameter Optimization**
+
+
+
+ハイパーパラメータ最適化とメタラーニングが構造として同じであることを指摘し, これを二段階最適化で解くアプローチを提案. 手法としては Reversed Hyper Gradient というものを用いている. これは一度ハイパーパラメータを固定した上で訓練データ上で学習した後, エポックを遡る形でそのハイパーパラメータに対する評価を勾配降下して求めるというもの. このアプローチ自体は Maclaurin et al. によって2015年に提案されている. 本論文では問題設定にまつわるコンパクト性などの仮定のもと, 解の存在性と収束性について定理を与えている. また, 内部ループのエポック数 $T$ にまつわる実験, Few-shot Learning による実験, 表現学習に対する実験を行なっている. 内部の問題を解く際のエポック数 $T$ は必ずしも多いほど良いとは限らないことなどが数値的に確かめられている.
+
+They pointed out that hyperparameter optimization and meta-learning are structurally the same, and proposed a two-stage optimization approach to solve this problem. As a method, they use the Reversed Hyper Gradient method. Once the hyperparameters are fixed, the model is trained on the training data, and then the evaluation of the hyperparameters is graded downward in the epoch. This approach itself was proposed by Maclaurin et al. in 2015. In this paper, they give theorems on the existence and convergence of the solution under the assumptions, such as compactness of the problem setting. They also conduct experiments on the epoch number $T$ of the inner loop, experiments with Few-shot Learning, and experiments on representation learning. It is confirmed numerically that the higher the number of epochs $T$ in solving the inner loop, the better it is.
 
 
 
@@ -1344,3 +1360,6 @@ Section 6 Model Extraction given class labels only
 <a name="xiao2015feature"> </a>[61] Huang Xiao, Battista Biggio, Gavin Brown, Giorgio Fumera, Claudia Eckert, and Fabio Roli. Is feature selection secure against training data poisoning? In *Proceedings of the 32th International Conference on Machine Learning*, pages 1689–1698, 2015.
 
 <a name="mahloujifar2019curse"> </a>[62] Saeed Mahloujifar, Dimitrios I Diochnos, and Mohammad Mahmoody. The curse of concentration in robust learning: Evasion and poisoning attacks from concentration of measure. In *Thirty-Third AAAI Conference on Artificial Intelligence*, pages 4536–4543, 2019.
+
+<a name="franceschi2018bilevel"> </a>[63] Luca Franceschi, Paolo Frasconi, Saverio Salzo, Riccardo Grazzi, and Massimiliano Pontil. Bilevel programming for hyperparameter optimization and meta-learning. In Proceedings of the 35th International Conference on Machine Learning, pages 1568–1577, 2018.
+
