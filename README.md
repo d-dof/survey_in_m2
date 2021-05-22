@@ -12,7 +12,9 @@ This version is 0.4.
 
 ## Abstract
 
-- これは森のサーベイの一部をサーベイ時の時系列順にまとめたものです.
+- これは森のサーベイをサーベイ時の時系列順にまとめたものです.
+- 日記代わりに大体1日に1つ論文をまとめるようにしていました. 
+  - 間が空いている時もありますが...
 - このサーベイは次の論文に繋がっています. ご興味があれば是非一度読んでみて下さい.
     - [BODAME: Bilevel Optimization for Defense Against Model Extraction](https://arxiv.org/abs/2103.06797)
 
