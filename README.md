@@ -1,22 +1,25 @@
 # README
 
-森のM2におけるサーベイの日記です.
+森のM2におけるサーベイの一部をまとめたものです.
 
 
 
 ## Version
 
-This version is 0.2 
+This version is 0.4.
 
 
 
 ## Abstract
 
-- これは森のサーベイをサーベイ時の時系列順にまとめたものです.
-- 日記代わりに大体1日に1つ論文をまとめるようにしています. 
+- これは森のサーベイの一部をサーベイ時の時系列順にまとめたものです.
+- このサーベイは次の論文に繋がっています. ご興味があれば是非一度読んでみて下さい.
+    - [BODAME: Bilevel Optimization for Defense Against Model Extraction](https://arxiv.org/abs/2103.06797)
 
-- (このサーベイは次の論文の出版に繋がっています. ご興味があれば是非一度読んでみて下さい.)
-
+- This is mori's survey in order.
+- This is almost a diary.
+- This survey is a basis of the following paper
+  - [BODAME: Bilevel Optimization for Defense Against Model Extraction](https://arxiv.org/abs/2103.06797)
 
 
 ## Main Interest
@@ -29,13 +32,15 @@ This version is 0.2
 - Kernel Methods
 - Machine Teaching
 - Gaussian Process
+- Poisoning
+- Meta-Learning
 
 
 
 
 ## Main Conferences & Jounals
 
-*ICML*, *NeurIPS*, *ICLR*, *AAAI*, *AISTATS*, *JMLR*, *S&P*, *Security* 
+*ICML*, *NeurIPS*, *ICLR*, *AAAI*, *AISTATS*, *JMLR*, *S&P*, *USENIX Security* 
 
 
 

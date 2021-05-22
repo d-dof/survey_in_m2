@@ -25,6 +25,8 @@ This version is 0.4.
 
 - This is mori's survey in order.
 - This is almost a diary.
+- This survey is a basis of the following paper
+  - [BODAME: Bilevel Optimization for Defense Against Model Extraction](https://arxiv.org/abs/2103.06797)
 
 
 
@@ -45,7 +47,7 @@ This version is 0.4.
 
 ## Main Conferences & Jounals
 
-*ICML*, *NeurIPS*, *ICLR*, *AAAI*, *AISTATS*, *JMLR*, *S&P*, *Security* 
+*ICML*, *NeurIPS*, *ICLR*, *AAAI*, *AISTATS*, *JMLR*, *S&P*, *USENIX Security* 
 
 
 
