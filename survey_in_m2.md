@@ -83,16 +83,12 @@ This version is 0.4.
 
 - This survey may contain wrong summary since I often read papers in a hurry. Please pay attention to this.
 - Mainly, Translation by [DeepL](https://www.deepl.com/en/home) . Thanks for exellent service !!!
-- But I often don't check the precise expression, so it may be diffrent from Japanese expression or contain wrong expression by translation.
+- But I often don't check the precise expression, so it may be different from Japanese expression or contain wrong expression by translation.
 - Each Figure is cited from each paper.
 
 
 
 # Survey Diary
-
-
-
-
 
 
 
@@ -1365,5 +1361,5 @@ Section 6 Model Extraction given class labels only
 
 <a name="mahloujifar2019curse"> </a>[62] Saeed Mahloujifar, Dimitrios I Diochnos, and Mohammad Mahmoody. The curse of concentration in robust learning: Evasion and poisoning attacks from concentration of measure. In *Thirty-Third AAAI Conference on Artificial Intelligence*, pages 4536–4543, 2019.
 
-<a name="franceschi2018bilevel"> </a>[63] Luca Franceschi, Paolo Frasconi, Saverio Salzo, Riccardo Grazzi, and Massimiliano Pontil. Bilevel programming for hyperparameter optimization and meta-learning. In Proceedings of the 35th International Conference on Machine Learning, pages 1568–1577, 2018.
+<a name="franceschi2018bilevel"> </a>[63] Luca Franceschi, Paolo Frasconi, Saverio Salzo, Riccardo Grazzi, and Massimiliano Pontil. Bilevel programming for hyperparameter optimization and meta-learning. In *Proceedings of the 35th International Conference on Machine Learning*, pages 1568–1577, 2018.
 
